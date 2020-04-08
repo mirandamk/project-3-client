@@ -6,36 +6,39 @@ import axios from 'axios';
 class App extends Component {
   constructor(props) {
     super(props);
-
+      
     this.state = {
-      name: null,
+      users: []
     };
   }
+
   componentDidMount() {
     axios
-      .get('http://localhost:3000/home')
+      .get('http://localhost:3000')
       .then((response) => {
-        debugger;
-        this.setState({ name: response.data });
+        this.setState({ users: response.data });
+        console.log(response.data)
       })
       .catch((err) => {
-        debugger;
+        console.log(err)
       });
   }
   render() {
+    let users = this.state.users;
     return (
       <div>
         <h1>Test page</h1>
-        <>
-          {this.state.name ? (
-            <h1>{this.state.name.name}</h1>
-          ) : (
-            <h1>Loading...</h1>
-          )}
-        </>
+        <div className="App">
+        {users.map((user) => {
+          return(
+               <h1>{user.firstName}</h1>
+          )
+        })}
+        </div>
       </div>
-    );
+    ) 
   }
 }
+      
 
 export default App;
