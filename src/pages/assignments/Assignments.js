@@ -13,7 +13,7 @@ class Assignments extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:3000/assignment')
+      .get('http://localhost:3000/assignments')
       .then((response) => {
         this.setState({ assignments: response.data });
         console.log(response.data)
