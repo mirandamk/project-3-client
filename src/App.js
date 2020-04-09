@@ -1,43 +1,20 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import './App.css';
-// import axios from 'axios';
-import Assign from './pages/Assign.js';
-import User from './pages/User.js';
-import {Route, Switch} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Assignments from './pages/Assignments';
+import Users from './pages/Users';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-      
-    this.state = {
-      // users: []
-    };
-  }
-
-  // componentDidMount() {
-  //   axios
-  //     .get('http://localhost:3000')
-  //     .then((response) => {
-  //       this.setState({ users: response.data });
-  //       console.log(response.data)
-  //     })
-  //     .catch((err) => {
-  //       console.log(err)
-  //     });
-  // }
   render() {
     return (
-      <div>
-        <h1>Test page</h1>
+      <div className="App">
         <Switch>
-          <Route path="/user" component={User}></Route>
-          <Route path="/assignment" component={Assign}></Route>
+          {/* <Route exact path="/" component={Home} /> */}
+          <Route exact path="/" component={Users} />
+          <Route exact path="/assignments" component={Assignments} />
         </Switch>
       </div>
-    ); 
+    );
   }
 }
-      
 
 export default App;
