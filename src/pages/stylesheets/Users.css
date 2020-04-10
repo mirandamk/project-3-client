@@ -1,0 +1,36 @@
+.content{
+    display: flex;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.signupBtn{
+    background-color: rgb(96, 171, 240);
+    border-color: rgb(96, 171, 240);
+    border-radius: 2px;
+}
+
+.signupBtn a{
+    text-decoration: none;
+    color: black;
+    size: 30px;
+}
+
+.loginBtn{
+    background-color: rgb(192, 155, 192);
+    border-color: rgb(192, 155, 192);
+    border-radius: 2px;
+}
+
+.loginBtn a{
+    text-decoration: none;
+    color: black;
+    size: 30px;
+}
