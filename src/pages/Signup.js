@@ -75,7 +75,7 @@ export default class Signup extends Component {
 
 
 
-
+// insf
 // import React, { Component } from 'react';
 // import { signup } from '../utils/auth';
 // import Axios from 'axios';
