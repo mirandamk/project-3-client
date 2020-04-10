@@ -25,13 +25,13 @@ class User extends Component {
       });
   }
   render() {
-    let users = this.state.users;
+    // let users = this.state.users;
     return (
       <article className="media">
-        <div className="media-content">
-          <div className="content">
-            <div>
-              <h1>
+        {/* <div className="media-content"> */}
+          {/* <div className="content"> */}
+            {/* <div> */}
+              {/* <h1>
                 Homepage for buttons of signup and login-buttons. (take out
                 later)
               </h1>
@@ -45,7 +45,7 @@ class User extends Component {
                     </>
                   );
                 })}
-              </div>
+              </div> */}
 
               <div className="buttons">
                 <button className="signupBtn">
@@ -67,9 +67,9 @@ class User extends Component {
                 <Route path="/signup" component={Signup} />
                 {/* <Route path="/login" component={Login} /> */}
               </Switch>
-            </div>
-          </div>
-        </div>
+            {/* </div> */}
+          {/* </div> */}
+        {/* </div> */}
       </article>
     );
   }

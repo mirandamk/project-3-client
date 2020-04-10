@@ -1,6 +1,9 @@
-.content{
+.media{
+    height: 100%;
+    min-height: 40em;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .buttons{
