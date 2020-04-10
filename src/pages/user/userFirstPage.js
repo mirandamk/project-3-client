@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class userFirstPage extends Component {
   constructor(props) {
     super(props);
@@ -35,9 +34,9 @@ class userFirstPage extends Component {
 
               <div>
                 <div>
-                    <figure className="image is-128x128">
-                        <img src=".../icons/peep_p1.png" alt=""/>
-                    </figure>
+                  <figure className="image is-128x128">
+                    <img src=".../icons/peep_p1.png" alt="" />
+                  </figure>
                 </div>
                 <div></div>
               </div>
@@ -51,7 +50,7 @@ class userFirstPage extends Component {
                 <div></div>
                 <div></div>
               </div>
-              
+
               <div>
                 <div></div>
                 <div></div>
@@ -61,7 +60,7 @@ class userFirstPage extends Component {
         })}
       </div>
     );
-    }
+  }
 }
 
 export default userFirstPage;
