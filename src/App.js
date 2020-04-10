@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Assignments from './pages/assignments/Assignments';
 import Users from './pages/Users';
 import Masculinity from './pages/assignments/Masculinity';
+// import Signup from './pages/Signup';
 // import Individualism from './pages/assignments/Individualism';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route exact path="/" component={Users} />
           <Route path="/assignments" component={Assignments} />
           <Route path="/masculinity" component={Masculinity} />
+          {/* <Route path="/signup" component={Signup} /> */}
           {/* <Route path="/individualism" component={Individualism} /> */}
         </Switch>
       </div>
