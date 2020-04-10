@@ -1,16 +1,18 @@
-.media{
+.bg{
     height: 100%;
-    min-height: 40em;
+    min-height: 51em;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-image: url('/cover_hero-1.svg');
+    background-repeat: no-repeat;
 }
 
+/*http://localhost:3000/(Users.js)*/
 .buttons{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     margin: 10px 0;
 }
 
@@ -18,22 +20,64 @@
     background-color: rgb(96, 171, 240);
     border-color: rgb(96, 171, 240);
     border-radius: 2px;
+    width: 230px;
+    height: 90px;
 }
 
 .signupBtn a{
-    text-decoration: none;
-    color: black;
     size: 30px;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .loginBtn{
-    background-color: rgb(192, 155, 192);
-    border-color: rgb(192, 155, 192);
+    background-color: rgb(226, 194, 226);
+    border-color: rgb(226, 194, 226);
     border-radius: 2px;
+    width: 230px;
+    height: 90px;
 }
 
 .loginBtn a{
-    text-decoration: none;
-    color: black;
     size: 30px;
+    font-size: 30px;
+    font-weight: 500;
 }
+
+/*http://localhost:3000/user(User-welcome.js)*/
+.user-header{
+    background-color: rgb(71, 104, 123);
+    margin: 2% 8%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-box{
+    background-color: rgb(226, 194, 226);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 2% 8%;
+    height: 150px;
+}
+
+.icon-card-box{
+    margin: auto 10%;
+}
+
+.icon-card{
+    width: 11vw;
+}
+
+.icon{
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+}
+

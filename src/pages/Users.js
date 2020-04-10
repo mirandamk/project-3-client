@@ -27,15 +27,8 @@ class User extends Component {
   render() {
     // let users = this.state.users;
     return (
-      <article className="media">
-        {/* <div className="media-content"> */}
-          {/* <div className="content"> */}
-            {/* <div> */}
-              {/* <h1>
-                Homepage for buttons of signup and login-buttons. (take out
-                later)
-              </h1>
-              <div className="App">
+      <article className="bg">
+              {/* <div className="App">
                 {users.map((user) => {
                   return (
                     <>
@@ -57,19 +50,11 @@ class User extends Component {
                   <Link to="/login">LOG IN</Link>
                 </button>
               </div>
-
-              {/* <div>Link to "Change profile"</div>
-            <div>Link to "Information study abroad"</div>
-            <div>Link to "Start assignments"</div>
-            <div>Link to "Results"</div> */}
-
-              <Switch>
+              
+                <Switch>
                 <Route path="/signup" component={Signup} />
                 {/* <Route path="/login" component={Login} /> */}
               </Switch>
-            {/* </div> */}
-          {/* </div> */}
-        {/* </div> */}
       </article>
     );
   }
