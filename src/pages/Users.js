@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import './App.css';
 import axios from 'axios';
+import Signup from './Signup.js';
+import { Switch, Route, Link } from 'react-router-dom';
 
 class User extends Component {
   constructor(props) {
@@ -26,17 +28,29 @@ class User extends Component {
     let users = this.state.users;
     return (
       <div>
-        <h1>User page</h1>
+        <h1>Homepage for logged in user</h1>
         <div className="App">
-        {users.map((user) => {
-          return(
-               <h1>{user.firstName}</h1>
-
-          )
-        })}
+          {users.map((user) => {
+            return (
+              <>
+                <div>
+                  <h1>Welcome, {user.firstName}</h1>
+                </div>
+              </>
+            );
+          })}
         </div>
+        <div>Link to "Change profile"</div>
+        <div>Link to "Information study abroad"</div>
+        <div>Link to "Start assignments"</div>
+        <div>Link to "Results"</div>
+
+        <Switch>
+          <Route path="/signup" component={Signup}/>
+        </Switch>
+        <Link to="/signup">Go to Signup</Link>
       </div>
-    )
+    );
   }
 }
 
