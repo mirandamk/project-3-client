@@ -1,148 +1,119 @@
-import React, { Component } from 'react'
-import axios from "axios";
-import qs from "qs";
-import {signup} from "../utils/auth";
-// import Nav from "../components/Nav";
-// import "./Signup.css";
-
-export default class Signup extends Component {
-
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  state = {
-    username: "",
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: ""
-  }
-
-  handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-
-  handleSubmit= (e) => {
-    e.preventDefault()
-    signup(this.state.user)
-    .then((response)=>{
-      console.log(response.data.message)
-    })
+import React from 'react';
+import { signup } from "../utils/auth";
 
 
-    axios({
-      method: 'POST',
-      data: qs.stringify(this.state),
-      url: 'http://localhost:3000/user/signup',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    })
-      .then((response) => {
-        debugger;
-        localStorage.setItem('user', JSON.stringify(response.data));
-        this.props.history.push('/');
-      })
-      .catch((error) => {
-        debugger;
-      });
-  }
+export default class Signup extends React.Component {
+                 constructor(props) {
+                   super(props);
+                   this.handleChange = this.handleChange.bind(this);
+                   this.handleSubmit = this.handleSubmit.bind(this);
+                 }
 
-  render() {
-    return (
-      <div className="signup-container">
-        <div className="signup-nav">
-        </div>
-        <div className="signup-form">
-          <form onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} value={this.state.username} placeholder="username" type="text" name="username" />
-            <input onChange={this.handleChange} value={this.state.firstname} placeholder="firstname" type="text" name="firstname" />
-            <input onChange={this.handleChange} value={this.state.lastname} placeholder="lastname" type="text" name="lastname" />
-            <input onChange={this.handleChange} value={this.state.email} placeholder="email" type="text" name="email" />
-            <input onChange={this.handleChange} value={this.state.password} placeholder="password" type="password" name="password" />
-            <button type="submit">Signup </button>
-          </form>
-        </div>
-      </div>
-    )
-  }
-}
+                 state = {
+                   user: {
+                     username: '',
+                     firstname: '',
+                     lastname: '',
+                     email: '',
+                     password: '',
+                   },
+                 };
 
+                 handleChange(event) {
+                   let userCopy = { ...this.state.user };
+                   userCopy[event.target.name] = event.target.value;
+                   this.setState({
+                     user: userCopy,
+                   });
+                 }
 
+                 handleSubmit() {
+                   signup(this.state.user)
+                     .then(() => {
+                       this.props.history.push('/');
+                       console.log(this.state.user);
+                     })
+                     .catch((err) => {
+                       console.log(err);
+                     });
+                 }
 
-// insf
-// import React, { Component } from 'react';
-// import { signup } from '../utils/auth';
-// import Axios from 'axios';
-
-// export default class Signup extends Component {
-//   state = {
-//     user: {},
-//   };
-
-//   formHandler = (e) => {
-//     let formdata = { ...this.state.user };
-//     formdata[e.target.name] = e.target.value;
-//     this.setState({
-//       user: formdata,
-//     });
-//   };
-
-//   submitHandler = (e) => {
-//     e.preventDefault();
-//     signup(this.state.user)
-//       .then((response) => {
-//         this.props.history.push('/');
-//       })
-//       .catch((err) => console.log(err));
-//   };
-
-//   checkUserExists = (username) => {};
-
-//   render() {
-//     return (
-//         <form className="signup" onSubmit={this.submitHandler}>
-//           <input
-//             name="username"
-//             type="text"
-//             onChange={this.formHandler}
-//             placeholder="username"
-//             required
-//           />
-//           <input
-//             name="email"
-//             type="text"
-//             onChange={this.formHandler}
-//             placeholder="email"
-//           />
-//           <input
-//             name="firstname"
-//             type="text"
-//             onChange={this.formHandler}
-//             placeholder="firstname"
-//             required
-//           />
-//             <input
-//             name="lastname"
-//             type="text"
-//             onChange={this.formHandler}
-//             placeholder="lastname"
-//             required
-//           />
-//           <input
-//             name="password"
-//             type="password"
-//             onChange={this.formHandler}
-//             placeholder="password"
-//             required
-//           />
-//           <button type="submit">Sign Up</button>
-//         </form>
-//     );
-//   }
-// }
+                 render() {
+                   return (
+                     <div className="sign-up-container">
+                       <h2>Sign up</h2>
+                       <div className="sign-up-form">
+                         <label>Username</label>
+                         <div>
+                           <input
+                             onChange={this.handleChange}
+                             value={this.state.username}
+                             name="username"
+                             type="text"
+                             placeholder="username"
+                             className="form-section"
+                           />
+                         </div>
+                       </div>
+                       <div className="sign-up-form">
+                         <label>First Name</label>
+                         <div>
+                           <input
+                             onChange={this.handleChange}
+                             value={this.state.firstname}
+                             name="firstname"
+                             type="text"
+                             placeholder="firstname"
+                             className="form-section"
+                           />
+                         </div>
+                       </div>
+                       <div className="sign-up-form">
+                         <label>Last Name</label>
+                         <div>
+                           <input
+                             onChange={this.handleChange}
+                             value={this.state.lastname}
+                             name="lastname"
+                             type="text"
+                             placeholder="lastname"
+                             className="form-section"
+                           />
+                         </div>
+                       </div>
+                       <div className="sign-up-form">
+                         <label>E-mail</label>
+                         <div>
+                           <input
+                             onChange={this.handleChange}
+                             value={this.state.email}
+                             name="email"
+                             type="text"
+                             placeholder="email"
+                             className="form-section"
+                           />
+                         </div>
+                       </div>
+                       <div className="sign-up-form">
+                         <label>Password</label>
+                         <div>
+                           <input
+                             onChange={this.handleChange}
+                             value={this.state.password}
+                             name="password"
+                             type="password"
+                             placeholder="password"
+                             className="form-section"
+                           />
+                         </div>
+                       </div>
+                       <button
+                         className="signup-btn"
+                         onClick={this.handleSubmit}
+                       >
+                         Sign Up
+                       </button>
+                     </div>
+                   );
+                 }
+               }
