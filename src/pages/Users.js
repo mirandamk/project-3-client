@@ -1,3 +1,4 @@
+//Note: Emilie, are we still using this page, or is this replaced by one of the pages in the 'user' folder?
 import React, { Component } from 'react';
 import './stylesheets/Users.css';
 import axios from 'axios';
@@ -68,7 +69,7 @@ class User extends Component {
 
 
 
-{/* NOTES UNDERNEATH THERE ARE SOME MERGE CONFLICTS */}
+{/* NOTE: UNDERNEATH THERE ARE SOME MERGE CONFLICTS. For that reason there are two sets of buttons */}
 
 
         <div className="buttons">

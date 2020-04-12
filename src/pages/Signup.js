@@ -1,7 +1,6 @@
 import React from 'react';
 import { signup } from "../utils/auth";
 
-
 export default class Signup extends React.Component {
                  constructor(props) {
                    super(props);
@@ -27,10 +26,12 @@ export default class Signup extends React.Component {
                    });
                  }
 
+                 //push '/' = url extension, to which page will the user go after login
+                 // 'login' refers to function in 'utils/auth'
                  handleSubmit() {
                    signup(this.state.user)
                      .then(() => {
-                       this.props.history.push('/');
+                       this.props.history.push('/login');
                        console.log(this.state.user);
                      })
                      .catch((err) => {

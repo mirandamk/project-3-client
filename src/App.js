@@ -1,3 +1,6 @@
+//Note: need to add homepage -> '/'
+//Individualism commented out for now, as it is not working yet.
+
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Assignments from './pages/assignments/Assignments';
@@ -7,6 +10,7 @@ import Signup from './pages/Signup';
 // import Individualism from './pages/assignments/Individualism';
 import userWelcome from './pages/user/User-welcome';
 import StudyAbroadInfo from './pages/user/StudyAbroadInfo';
+import Login from './pages/Login'
 
 
 class App extends Component {
@@ -22,6 +26,7 @@ class App extends Component {
           {/* <Route path="/individualism" component={Individualism} /> */}
           <Route path="/user" component={userWelcome} />
           <Route path="/study-abroad-info" component={StudyAbroadInfo} />
+          <Route path="/login" component={Login}/>
         </Switch>
       </div>
     );

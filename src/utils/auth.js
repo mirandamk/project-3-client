@@ -1,3 +1,5 @@
+//Note: copied from Jurgen and the Beer API assignment. Not entirely sure what is doing what. 
+
 import Axios from 'axios';
 // import qs from 'qs';
 var qs = require('qs');
@@ -12,7 +14,7 @@ const axios = Axios.create({
 export const login = function (username, password) {
   return axios({
     method: 'POST',
-    url: '/auth/login',
+    url: 'http://localhost:3000/login',
     headers: { 'content-type': 'application/x-www-form-urlencoded' },
     data: qs.stringify({ username, password }),
   }).then((response) => {
@@ -34,10 +36,10 @@ export const signup = (user) => {
   });
 };
 
-// export const loggedIn = function () {
-//   const user = getUser();
-//   return !!user;
-// };
+export const loggedIn = function () {
+  const user = getUser();
+  return !!user;
+};
 
 export const setUser = (user) => {
   window.localStorage.setItem('user', JSON.stringify(user));
@@ -55,50 +57,4 @@ export const getUser = () => {
 //     localStorage.removeItem('user');
 //     history.push('/home');
 //   });
-// };
-
-// import Axios from 'axios';
-// import qs from 'qs';
-
-// const axiosauth = Axios.create({
-//   baseURL: 'http://localhost:3000/user/',
-//   withCredentials: true,
-//   headers: {
-//     'content-type': 'application/x-www-form-urlencoded',
-//   },
-// });
-
-// export const login = (user) => {
-//   return axiosauth({
-//     method: 'POST',
-//     url: 'login',
-//     data: qs.stringify(user),
-//   }).then((response) => {
-//     if (response.data.user) {
-//       setUser(response.data.user);
-//     }
-//     return response;
-//   });
-// };
-
-// export const signup = (user) => {
-//   return axiosauth({
-//     method: 'POST',
-//     url: 'signup',
-//     data: qs.stringify(user),
-//   }).then((response) => {
-//     setUser(response.data);
-//   });
-// };
-
-// export const setUser = (user) => {
-//   window.localStorage.setItem('user', JSON.stringify(user));
-// };
-
-// export const getUser = () => {
-//   return JSON.parse(window.localStorage.getItem('user'));
-// };
-
-// export const logout = () => {
-//   window.localStorage.removeItem('user');
 // };
