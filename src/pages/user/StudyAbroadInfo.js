@@ -4,13 +4,13 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class StudyAbroadInfo extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    // this.state = {
-    //   users: [],
-    // };
-  }
+  //   this.state = {
+  //     users: [],
+  //   };
+  // }
   componentDidMount() {
     axios
       .get('http://localhost:3000/user')
@@ -29,62 +29,62 @@ class StudyAbroadInfo extends Component {
     return (
       <div>
         {/* {users.map((user) => { */}
-          {/* return ( */}
-            <article className="bg">
-
-
-              <div className="welcome-box">
-                <div className="icon-card-box">
-                  {/* <img
+        {/* return ( */}
+        <article className="bg">
+          <div className="welcome-box">
+            <div className="icon-card-box">
+              {/* <img
                     src="../icons/peep_p1.png"
                     alt=""
                     className="icon-card"
                   /> */}
-                </div>
-                <div>
-                  <Link to="/homeunicontact" className="icon">
-                    Contact details home uni
-                  </Link>
-                </div>
-              </div>
+            </div>
+            <div>
+              <Link to="/homeunicontact" className="icon">
+                Contact details home uni
+              </Link>
+            </div>
+          </div>
 
-              <div className="welcome-box">
-                <div className="icon-card-box">
-                  {/* <img
+          <div className="welcome-box">
+            <div className="icon-card-box">
+              {/* <img
                     src="../icons/icon_earth.png"
                     alt=""
                     className="icon-card"
-                  /> */} 
-                </div>
-                <div>
-                  <Link to="/homesickness" className="icon">
-                    What to do with home sickness
-                  </Link>
-                </div>
-              </div>
+                  /> */}
+            </div>
+            <div>
+              <Link to="/homesickness" className="icon">
+                What to do with home sickness
+              </Link>
+            </div>
+          </div>
 
-              <div className="welcome-box">
-                <div className="icon-card-box">
-                  {/* <img
+          <div className="welcome-box">
+            <div className="icon-card-box">
+              {/* <img
                     src="../icons/icon_start.png"
                     alt=""
                     className="icon-card"
                   /> */}
-                </div>
-                <div>
-                  <Link to="/exunicontact" className="icon">
-                    Contact detail/Info about exchange uni
-                  </Link>
-                </div>
-              </div>
+            </div>
+            <div>
+              <Link to="/exunicontact" className="icon">
+                Contact detail/Info about exchange uni
+              </Link>
+            </div>
+          </div>
 
-              {/* <BackBtn /> */}
-            </article>
-          );
-        })}
+          <div className="btnFooter">
+            <Link to="/user">
+              <button className="backBtn">Home</button>
+            </Link>
+          </div>
+        </article>
       </div>
     );
   }
 }
-
+      
 export default StudyAbroadInfo;

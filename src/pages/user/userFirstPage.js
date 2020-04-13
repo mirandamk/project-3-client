@@ -1,66 +1,68 @@
-import React, { Component } from 'react';
+// //This file is replaced by User-welcome.js. Should be removed.
 
-class userFirstPage extends Component {
-  constructor(props) {
-    super(props);
+// import React, { Component } from 'react';
 
-    this.state = {
-      users: [],
-    };
-  }
-  componentDidMount() {
-    axios
-      .get('http://localhost:3000/user')
-      .then((response) => {
-        this.setState({ users: response.data });
-        console.log(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }
+// class userFirstPage extends Component {
+//   constructor(props) {
+//     super(props);
 
-  render() {
-    let users = this.state.users;
+//     this.state = {
+//       users: [],
+//     };
+//   }
+//   componentDidMount() {
+//     axios
+//       .get('http://localhost:3000/user')
+//       .then((response) => {
+//         this.setState({ users: response.data });
+//         console.log(response.data);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       })
+//   }
 
-    return (
-      <div>
-        {users.map((user) => {
-          return (
-            <>
-              <div>
-                <h1>Welcome {user.firstName}</h1>
-              </div>
+//   render() {
+//     let users = this.state.users;
 
-              <div>
-                <div>
-                  <figure className="image is-128x128">
-                    <img src=".../icons/peep_p1.png" alt="" />
-                  </figure>
-                </div>
-                <div></div>
-              </div>
+//     return (
+//       <div>
+//         {users.map((user) => {
+//           return (
+//             <>
+//               <div>
+//                 <h1>Welcome {user.firstName}</h1>
+//               </div>
 
-              <div>
-                <div></div>
-                <div></div>
-              </div>
+//               <div>
+//                 <div>
+//                   <figure className="image is-128x128">
+//                     <img src=".../icons/peep_p1.png" alt="" />
+//                   </figure>
+//                 </div>
+//                 <div></div>
+//               </div>
 
-              <div>
-                <div></div>
-                <div></div>
-              </div>
+//               <div>
+//                 <div></div>
+//                 <div></div>
+//               </div>
 
-              <div>
-                <div></div>
-                <div></div>
-              </div>
-            </>
-          );
-        })}
-      </div>
-    );
-  }
-}
+//               <div>
+//                 <div></div>
+//                 <div></div>
+//               </div>
 
-export default userFirstPage;
+//               <div>
+//                 <div></div>
+//                 <div></div>
+//               </div>
+//             </>
+//           );
+//         })}
+//       </div>
+//     );
+//   }
+// }
+
+// export default userFirstPage;

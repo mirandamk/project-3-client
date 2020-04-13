@@ -1,0 +1,123 @@
+/*http://localhost:3000/(Welcome-assignment.js)*/
+.WABackground{
+    background-color: rgb(96, 171, 240);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.WAInfoFrame{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 30px;
+}
+
+.WAHeader{
+    margin: 10px 0px 0 90px;
+}
+
+.WApara{
+    margin: 0px 10px 0px 0px;
+    text-align: -webkit-center;
+    display: block;
+}
+
+.WAPeep{
+    width: 20vh;
+    margin: 150px 0 0 0px;
+}
+
+.WABtn{
+    background-color: rgb(71, 104, 123);
+    border-color: rgb(71, 104, 123);
+    color: white;
+    font-weight: 900;
+    width: 100vw;
+    height: 10vh;
+}
+
+
+/*http://localhost:3000/(WeeklyAssignments.js)*/
+.assignBox{
+    background-image: url('/icons/peep_w2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 50em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+/*http://localhost:3000/(HofstedeIntro.js)*/
+
+.hofstedeBox{
+    background-color: rgb(96, 171, 240);
+    margin: 2% 8%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: -webkit-center;
+}
+
+.btnFooter{
+    margin: 2% 8%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.backBtn{
+    background-color: rgb(226, 194, 226);
+    border-color: rgb(226, 194, 226);
+    width: 40vw;
+}
+
+.nextBtn{
+    background-color: rgb(71, 104, 123);
+    border-color: rgb(71, 104, 123);
+    width: 40vw;
+}
+
+
+/*http://localhost:3000/(eachofthedimensionpages)*/
+.hofstedeForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(96, 171, 240);
+    height: auto;
+}
+
+.uploadPhotoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.uploadPhotoSize{
+    width: 20vw;
+    border-style: solid;
+}
+
+.textarea{
+    width: 80vw;
+    height: 20vh;
+    border-color: gray;
+    margin: 10px 0px;
+}
+
+.submitBtn{
+    width: 20vw;
+    background-color: gray;
+    border-style: hidden;
+    height: 5vh;
+    margin: 10px 0px;
+}
