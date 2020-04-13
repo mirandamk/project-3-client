@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../stylesheets/Users.css';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class StudyAbroadInfo extends Component {
   constructor(props) {
@@ -42,9 +42,9 @@ class StudyAbroadInfo extends Component {
                   /> */}
                 </div>
                 <div>
-                  {/* <Link to="/profile" className="icon"> */}
+                  <Link to="/homeunicontact" className="icon">
                     Contact details home uni
-                  {/* </Link> */}
+                  </Link>
                 </div>
               </div>
 
@@ -57,9 +57,9 @@ class StudyAbroadInfo extends Component {
                   /> */} 
                 </div>
                 <div>
-                  {/* <Link to="/study-abroad-info" className="icon"> */}
+                  <Link to="/homesickness" className="icon">
                     What to do with home sickness
-                  {/* </Link> */}
+                  </Link>
                 </div>
               </div>
 
@@ -72,11 +72,13 @@ class StudyAbroadInfo extends Component {
                   /> */}
                 </div>
                 <div>
-                  {/* <Link to="/assignments" className="icon"> */}
+                  <Link to="/exunicontact" className="icon">
                     Contact detail/Info about exchange uni
-                  {/* </Link> */}
+                  </Link>
                 </div>
               </div>
+
+              {/* <BackBtn /> */}
             </article>
           );
         })}
