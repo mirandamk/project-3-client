@@ -32,6 +32,7 @@ class Masculinity extends Component {
       url: 'http://localhost:3000/assignments',
       data: qs.stringify(this.state),
       method: 'POST',
+      withCredentials: true
     })
       .then(() => {
         this.props.history.push('/assignments');
@@ -86,3 +87,22 @@ class Masculinity extends Component {
 }
 
 export default Masculinity;
+
+//   render() {
+//     return (
+//       <form onSubmit={this.masculinity}>
+//         <input
+//           type="text"
+//           onChange={this.inputChangeHandler}
+//           name="answerMasculinity"
+//           placeholder="Add your answer"
+//         />
+//         {/* <label className="custom-file-upload">
+//             <input type="file" name="picture" />
+//           </label> */}
+//         <button type="submit">Submit your answer</button>
+//       </form>
+//     );
+//   }
+// }
+// export default Masculinity;

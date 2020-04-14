@@ -21,9 +21,9 @@ class Assignments extends Component {
       .get('http://localhost:3000/assignments')
       .then((response) => {
         this.setState({ assignments: response.data });
-        console.log("message from client assignment.js")
       })
       .catch((err) => {
+        // check the status code of error, if 403 redirect to login using history.push
         console.log(err)
       });
   }

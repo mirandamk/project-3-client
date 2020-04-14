@@ -11,6 +11,7 @@ import WelcomeAssignment from './pages/assignments/Welcome-assignment';
 import WeeklyAssignments from './pages/assignments/WeeklyAssignments';
 import HofstedeIntro from './pages/assignments/HofstedeIntro';
 import Dimensions from './pages/assignments/Dimensions';
+// import PhotoMa
 import Signup from './pages/Signup';
 // import Individualism from './pages/assignments/Individualism';
 import userWelcome from './pages/user/User-welcome';
