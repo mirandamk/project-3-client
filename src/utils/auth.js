@@ -11,12 +11,15 @@ const axios = Axios.create({
   baseURL: process.env.REACT_APP_API,
 });
 
-export const login = function (username, password) {
+export const login = function (user) {
   return axios({
     method: 'POST',
     url: 'http://localhost:3000/login',
-    headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    data: qs.stringify({ username, password }),
+    //    headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    //    data: qs.stringify(user),
+    data: user,
+    headers: { 'content-type': 'application/json' },
+    withCredentials: true,
   }).then((response) => {
     setUser(response.data);
   });
@@ -36,10 +39,10 @@ export const signup = (user) => {
   });
 };
 
-export const loggedIn = function () {
-  const user = getUser();
-  return !!user;
-};
+// export const loggedIn = function () {
+//   const user = getUser();
+//   return !!user;
+// };
 
 export const setUser = (user) => {
   window.localStorage.setItem('user', JSON.stringify(user));
