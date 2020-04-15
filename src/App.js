@@ -11,7 +11,7 @@ import WelcomeAssignment from './pages/assignments/Welcome-assignment';
 import WeeklyAssignments from './pages/assignments/WeeklyAssignments';
 import HofstedeIntro from './pages/assignments/HofstedeIntro';
 import Dimensions from './pages/assignments/Dimensions';
-// import PhotoMa
+import PhotoMasculinity from './pages/assignments/PhotoMasculinity'
 import Signup from './pages/Signup';
 // import Individualism from './pages/assignments/Individualism';
 import userWelcome from './pages/user/User-welcome';
@@ -31,8 +31,8 @@ class App extends Component {
           <Route path="/hofstede-intro" component={HofstedeIntro} />
           <Route path="/dimensions" component={Dimensions} />
           <Route path="/masculinity" component={Masculinity} />
+          {/* <Route path="/photomasculinity" componenent={PhotoMasculinity} /> */}
           <Route path="/signup" component={Signup} />
-          {/* <Route path="/individualism" component={Individualism} /> */}
           <Route path="/user" component={userWelcome} />
           <Route path="/study-abroad-info" component={StudyAbroadInfo} />
           <Route path="/login" component={Login} />
