@@ -1,68 +1,46 @@
 //This is a test page. Should be deleted at some point. Now used to check authentication protect
 
 import React, { Component } from 'react';
-// import './App.css';
+// import '../stylesheets/Users.css';
 import axios from 'axios';
-import { getUser } from '../../utils/auth';
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
-class Assignments extends Component {
+class userAssignments extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      assignments: []
+      user: null
     };
   }
-
   componentDidMount() {
     axios
-      .get('http://localhost:3000/assignments')
+      .get('http://localhost:3000/userassignments')
       .then((response) => {
-        this.setState({ assignments: response.data });
+        this.setState({ user: response.data });
+        console.log(response.data);
       })
       .catch((err) => {
-        // check the status code of error, if 403 redirect to login using history.push
-        console.log(err)
+        console.log(err);
       });
   }
+
   render() {
-    let user = getUser();
-    let assignments = this.state.assignments;
+    let user = this.state.user;
+
     return (
       <div>
-        {!user ? (
-          <Redirect to="/login" />
-        ) : (
-            <div>
-              <h1>Assignment page</h1>
-              <div className="Assignments">
-                {assignments.map((assignment) => {
-                  return (
-                    <div className="assignment-container">
-                      <div className="assignment-explanation">
-                        <h2>{assignment.explanation}</h2>
-                      </div>
-                      <div className="assignment-answer">
-                        <h3>{assignment.answer}</h3>
-                      </div>
-                      <div className="assignment-masculinity">
-                        <h3>{assignment.answerMasculinity}</h3>
-                      </div>
-                    </div>
-                  )
-                }
-                )
-                }
+            <article className="bg">
+              <div className="user-header">
+            {this.state.user && <h1>{this.state.user.firstname}</h1>}
               </div>
-            </div>
-          )
-        }
+            </article>
+          
+        
       </div>
-    )
+    );
   }
 }
 
-
-export default Assignments;
+export default userAssignments;
