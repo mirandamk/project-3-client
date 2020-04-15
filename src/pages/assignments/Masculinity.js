@@ -13,8 +13,9 @@ class Masculinity extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      answerMasculinity: '',
-      masculinityImageUrl: '',
+      dimension: '',
+      description: '',
+      image: '',
     };
   }
 
@@ -30,14 +31,14 @@ class Masculinity extends Component {
     const uploadData = new FormData();
     // imageUrl => this name has to be the same as in the model since we pass
     // req.body to .create() method when creating a new thing in '/api/things/create' POST route
-    uploadData.append('masculinityImageUrl', e.target.files[0]);
+    uploadData.append('dimension-image', e.target.files[0]);
 
     service
       .handleUpload(uploadData)
       .then((response) => {
         // console.log('response is: ', response);
         // after the console.log we can see that response carries 'secure_url' which we can use to update the state
-        this.setState({ masculinityImageUrl: response.secure_url });
+        this.setState({ image: response });
       })
       .catch((err) => {
         console.log('Error while uploading the file: ', err);
@@ -61,16 +62,20 @@ class Masculinity extends Component {
   render() {
     return (
       <div>
-        <h2>Masculinity</h2>
+        <h2>Select dimension</h2>
         <form onSubmit={(e) => this.handleSubmit(e)}>
+          <select onChange={(e) => this.handleChange(e)} name="dimension" default value={this.state.dimension}>
+            <option value="masculinity">masculinity</option>
+            <option value="individualism">individualism</option>
+          </select>
           <label>Description</label>
           <textarea
             type="text"
-            name="answerMasculinity"
-            value={this.state.answerMasculinity}
+            name="description"
+            value={this.state.description}
             onChange={(e) => this.handleChange(e)}
           />
-          <input type="file" onChange={(e) => this.handleFileUpload(e)} />
+          <input type="file" name="dimension-image"  onChange={(e) => this.handleFileUpload(e)} />
           <button type="submit">Save answer</button>
         </form>
       </div>

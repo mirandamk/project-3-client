@@ -19,7 +19,7 @@ export default {
   handleUpload(theFile) {
     console.log('file in service: ', theFile);
     return service
-      .post('/upload', theFile)
+      .post('/uploadimage', theFile)
       .then((res) => res.data)
       .catch(errorHandler);
   },
@@ -27,7 +27,7 @@ export default {
   saveAssignment(newAssignment) {
     console.log('new thing is: ', newAssignment);
     return service
-      .post('/save', newAssignment)
+      .post('/create', newAssignment)
       .then((res) => res.data)
       .catch(errorHandler);
   },
