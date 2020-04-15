@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 class CountryList extends Component {
   render() {
-
     return (
       <div>
         <Link to={`/countries/${this.props.name}`}>{this.props.name}</Link>
@@ -11,5 +10,4 @@ class CountryList extends Component {
     );
   }
 }
-
 export default CountryList;

@@ -6,7 +6,7 @@ class CountryDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countries: [],
+      countries: []
     };
   }
   componentDidMount() {
@@ -21,16 +21,11 @@ class CountryDetail extends Component {
       });
   }
   render() {
-    // let country = this.state.countries.find(
-    //   (ctr) => ctr._id === this.props.match.params.name
-    // );
-     let country = this.state.countries;
-
+    //   let country = this.state.countries;
     return (
       <div>
-        <p>(Text coming from CountryDetail.js,</p>
-        <p>Want to show the name of the chosen country from the list )</p>
-        <h1>{country.name}</h1>
+        <h1>{this.props.match.params.name}</h1>
+        {/* <p>{this.props.match.params.image}</p> */}
       </div>
     );
   }
