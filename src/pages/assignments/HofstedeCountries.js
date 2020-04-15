@@ -3,8 +3,7 @@ import {Link, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import CountryDetail from './CountryDetail';
 import CountryList from './CountryList';
-// import qs from 'qs';
-
+import '../stylesheets/Assignments.css';
 
 class HofstedeCountries extends Component {
     constructor(props) {
@@ -33,23 +32,28 @@ componentDidMount(){
                 <h2>Assignments Week 6-15</h2>
               </div>
             </div>
-            <div>
-              <div className="hofstedeBox">
-                <ul>
-                  {countries.map(country => (
-                    <CountryList
-                      key={country.name}
-                      name={country.name}
-                      population={country.population}
-                    />
-                  ))}
-                </ul>
-                <div>
-                  <Switch>
-                    <Route path="/countries/:name" component={CountryDetail} />
-                  </Switch>
-                </div>
+
+            <div className="hofstedeCountryBox">
+              <div className="countryList">
+                <h3 className="countryListHeader">Choose country:</h3>
+                {countries.map((country) => (
+                  <CountryList
+                    key={country.name}
+                    name={country.name}
+                    population={country.population}
+                  />
+                ))}
               </div>
+
+              <div>
+                <Switch>
+                  <Route path="/countries/:name" component={CountryDetail} />
+                </Switch>
+              </div>
+
+
+                <img src="../icons/peep_w6.png" alt="x" className="HCPeep"/>
+
             </div>
 
             <div className="btnFooter">

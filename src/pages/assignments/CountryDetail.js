@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import '../stylesheets/Assignments.css';
 
 class CountryDetail extends Component {
   constructor(props) {
@@ -21,11 +21,21 @@ class CountryDetail extends Component {
       });
   }
   render() {
-    //   let country = this.state.countries;
+      let country = null
+      if(this.state.countries.length === 0){
+        country = this.state.countries;
+      }else {
+        country = this.state.countries.find(
+        (ctr) => ctr.name === this.props.match.params.name);
+      }
     return (
-      <div>
-        <h1>{this.props.match.params.name}</h1>
-        {/* <p>{this.props.match.params.image}</p> */}
+      <div className="CountryDetailBox">
+          <h2>{this.props.match.params.name}</h2>
+          <img
+            src={country.image}
+            alt="aint working babe"
+            className="countryImg"
+          />
       </div>
     );
   }
