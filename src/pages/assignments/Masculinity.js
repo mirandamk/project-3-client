@@ -1,10 +1,11 @@
 //Note: still need to add upload photo functionality. Shall we use Cloudinary or not?
-//Note: need to figure out how to add it to the user._id 
+//Note: need to figure out how to add it to the user._id
+// when user doesn't add a dimension, have an alert box open up
 
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import axios from 'axios';
-import qs from 'qs';
+// import {Link} from 'react-router-dom';
+// import axios from 'axios';
+// import qs from 'qs';
 import service from '../../api/service';
 // import Nav from '../components/Nav';
 // import './AddBeerFile.css';
@@ -65,9 +66,25 @@ class Masculinity extends Component {
       <div>
         <h2>Select dimension</h2>
         <form onSubmit={(e) => this.handleSubmit(e)}>
-          <select onChange={(e) => this.handleChange(e)} name="dimension" default value={this.state.dimension}>
-            <option value="masculinity">masculinity</option>
-            <option value="individualism">individualism</option>
+          <select
+            onChange={(e) => this.handleChange(e)}
+            name="dimension"
+            default
+            value={this.state.dimension}
+          >
+            <option>Choose a dimension</option>
+            <option value="power distance">power distance</option>
+            <option value="individualism-collectivism">
+              individualism-collectivism
+            </option>
+            <option value="masculinity-feminity">masculinity-feminity</option>
+            <option value="uncertainty avoidance">uncertainty avoidance</option>
+            <option value="long term - short term orientation">
+              long term - short term orientation
+            </option>
+            <option value="indulgence - restraint">
+              indulgence - restraint
+            </option>
           </select>
           <label>Description</label>
           <textarea
@@ -76,7 +93,11 @@ class Masculinity extends Component {
             value={this.state.description}
             onChange={(e) => this.handleChange(e)}
           />
-          <input type="file" name="dimension-image"  onChange={(e) => this.handleFileUpload(e)} />
+          <input
+            type="file"
+            name="dimension-image"
+            onChange={(e) => this.handleFileUpload(e)}
+          />
           <button type="submit">Save answer</button>
         </form>
       </div>
@@ -86,15 +107,8 @@ class Masculinity extends Component {
 
 export default Masculinity;
 
-
-
-
-
-
-
-
 // //Note: still need to add upload photo functionality. Shall we use Cloudinary or not?
-// //Note: need to figure out how to add it to the user._id 
+// //Note: need to figure out how to add it to the user._id
 
 // import React, { Component } from 'react';
 // import {Link} from 'react-router-dom';
