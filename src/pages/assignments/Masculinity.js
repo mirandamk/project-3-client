@@ -11,7 +11,7 @@ import qs from 'qs';
 class Masculinity extends Component {
   constructor(props) {
     super(props);
-
+    this.formRef = React.createRef();
     this.inputChangeHandler = this.inputChangeHandler.bind(this);
     this.masculinity = this.masculinity.bind(this);
   }
@@ -28,13 +28,18 @@ class Masculinity extends Component {
 
   masculinity(e) {
     e.preventDefault();
+    var formData = new formData(this.formRef.current);
     axios({
       url: 'http://localhost:3000/assignments',
-      data: qs.stringify(this.state),
+      data: formData,
+      headers: {
+        'content-type': 'multipart/formData'
+      },
+      // data: qs.stringify(this.state),
       method: 'POST',
     })
       .then(() => {
-        this.props.history.push('/assignments');
+        this.props.history.push('/masculinity');
       })
       .catch((err) => {
         console.log('Error', err);
@@ -45,14 +50,17 @@ class Masculinity extends Component {
     return (
       <div>
         <form onSubmit={this.masculinity} className="hofstedeForm">
+
           <div className="uploadPhotoBox">
-            (info about the take a photo-task and upload photo area) <br></br>Upload
-            photo here
+            (info about the take a photo-task and upload photo area)
             <img
               src="../icons/peep_p3.png"
               alt=""
               className="uploadPhotoSize"
             />
+            <label className="custom-file-upload">
+            <input type="file" name="picture" /> Upload here
+          </label>
           </div>
           <div>
             <label>
@@ -66,9 +74,6 @@ class Masculinity extends Component {
               placeholder="Add your answer"
               className="textarea"
             />
-            {/* <label className="custom-file-upload">
-            <input type="file" name="picture" />
-          </label> */}
             <button type="submit" className="submitBtn">
               Submit your answer
             </button>

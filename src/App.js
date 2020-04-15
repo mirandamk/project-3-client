@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Masculinity from './pages/assignments/Masculinity';
 import WelcomeAssignment from './pages/assignments/Welcome-assignment';
 import WeeklyAssignments from './pages/assignments/WeeklyAssignments';
+import HofstedeCountries from './pages/assignments/HofstedeCountries';
 import HofstedeIntro from './pages/assignments/HofstedeIntro';
 import Dimensions from './pages/assignments/Dimensions';
 import Signup from './pages/Signup';
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/assignments" component={Assignments} />
           <Route path="/wassignments" component={WelcomeAssignment} />
+          <Route path="/countries" component={HofstedeCountries}/>
           <Route path="/weekassignments" component={WeeklyAssignments} />
           <Route path="/hofstede-intro" component={HofstedeIntro} />
           <Route path="/dimensions" component={Dimensions} />

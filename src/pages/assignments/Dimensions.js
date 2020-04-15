@@ -60,7 +60,7 @@ class Dimensions extends Component {
             </div>
 
             <div className="btnFooter">
-              <Link to="/hofstede-intro">
+              <Link to="/countries">
                 <button className="backBtn">Back</button>
               </Link>
             </div>

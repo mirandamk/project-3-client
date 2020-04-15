@@ -43,7 +43,8 @@ class WelcomeAssignment extends Component {
         <div className="btnFooter">
           <Link to="/user">
             <button className="backBtn">
-              Home // obs place this button later so it fits somewhere logical. Or should have at all?
+              Home // obs place this button later so it fits somewhere logical.
+              Or should have at all?
             </button>
           </Link>
         </div>

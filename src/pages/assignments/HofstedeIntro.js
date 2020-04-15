@@ -40,7 +40,7 @@ class HofstedeIntro extends Component {
               <Link to="/weekassignments">
                 <button className="backBtn">Back</button>
               </Link>
-              <Link to="/dimensions">
+              <Link to="/countries">
                 <button className="nextBtn">Next</button>
               </Link>
             </div>
