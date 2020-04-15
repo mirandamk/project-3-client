@@ -88,7 +88,6 @@ export default Masculinity;
 
 
 
-
 // //Note: still need to add upload photo functionality. Shall we use Cloudinary or not?
 // //Note: need to figure out how to add it to the user._id 
 
