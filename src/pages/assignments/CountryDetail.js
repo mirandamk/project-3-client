@@ -13,6 +13,7 @@ class CountryDetail extends Component {
     axios
       .get('http://localhost:3000/countries')
       .then((response) => {
+        console.log(response.data);
         this.setState({ countries: response.data });
       })
       .catch((err) => {
@@ -20,33 +21,19 @@ class CountryDetail extends Component {
       });
   }
   render() {
-             debugger;
-             // const countryDetailInfo = {
-             //   width: '70%',
-             // };
-            //  let countries = this.state.countries.find( (ctr) => ctr._id === this.props.match.params._id);
-            //  let countries = this.state.countries;
+    // let country = this.state.countries.find(
+    //   (ctr) => ctr._id === this.props.match.params.name
+    // );
+     let country = this.state.countries;
 
-             return (
-               <div class="col-7">
-                 {/* <h1>{countries.name}</h1> */}
-                     <div>
-                       {/* {countries.map((country) => ( */}
-                       {/* <p>{country.name}</p> */}
-                       {/* ))} */}
-                     </div>
-                     <div>
-                       {/* {theCountry.borders.map((country, index) => (
-                         <p>
-                           <Link to={`/country-detail/${country}`}>
-                             {country}
-                           </Link>
-                         </p>
-                       ))} */}
-                     </div>
-               </div>
-             );
-           }
+    return (
+      <div>
+        <p>(Text coming from CountryDetail.js,</p>
+        <p>Want to show the name of the chosen country from the list )</p>
+        <h1>{country.name}</h1>
+      </div>
+    );
+  }
 }
 
 export default CountryDetail;

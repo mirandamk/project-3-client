@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link, Route } from 'react-router-dom';
 import axios from 'axios';
 import CountryDetail from './CountryDetail';
+import CountryList from './CountryList';
 // import qs from 'qs';
 
 
@@ -10,21 +11,21 @@ class HofstedeCountries extends Component {
         super(props)
 
         this.state = {
-          value: 'select',
-          // countries: []
+        //   value: 'select',
+          countries: []
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event){
-        this.setState({value: event.target.value});
-    }
-    handleSubmit(event, req, res){
-        alert(this.state.value);
-        res.send('./CountryDetail')
-        // preventDefault();
-    }
+    // handleChange(event){
+    //     this.setState({value: event.target.value});
+    // }
+    // handleSubmit(event, req, res){
+    //     alert(this.state.value);
+    //     res.send('./CountryDetail')
+    //     // preventDefault();
+    // }
 componentDidMount(){
     axios
         .get('http://localhost:3000/countries')
@@ -37,7 +38,7 @@ componentDidMount(){
 }
 
     render() {
-        // let countries = this.state.countries;
+        let countries = this.state.countries;
         return (
           <div>
             <div>
@@ -47,7 +48,7 @@ componentDidMount(){
             </div>
             <div>
               <div className="hofstedeBox">
-                <form onSubmit={this.handleSubmit}>
+                {/* <form onSubmit={this.handleSubmit}>
                   <label>
                     Choose country:
                     <select
@@ -65,18 +66,24 @@ componentDidMount(){
                     </select>
                   </label>
                   <input type="submit" value="Submit" />
-                </form>
-
+                </form> */}
+                <ul>
+                  <li>
+                      (List from original running spa
+                      HofstedeCountries.js)
+                  </li>
+                  {countries.map((country, index) => (
+                    <CountryList
+                    key={index}
+                    name={country.name}
+                    population={country.population}
+                    />
+                  ))}
+                </ul>
                 <div>
-                  <Route path="/countries" component={CountryDetail} />
+                  <Route path="/countries/:name" component={CountryDetail} />
                 </div>
               </div>
-
-              {/* <div>
-                {countries.map((country) => (
-                  <p>{country.name}</p>
-                ))}
-              </div> */}
             </div>
 
             <div className="btnFooter">
