@@ -4,11 +4,12 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../stylesheets/Assignments.css';
 // import axios from 'axios';
 // import qs from 'qs';
 import service from '../../api/service';
 // import Nav from '../components/Nav';
-// import './AddBeerFile.css';
+
 
 class Assignment extends Component {
   constructor(props) {
@@ -62,11 +63,13 @@ class Assignment extends Component {
 
   render() {
     return (
-      <div className="assignment-container">
+      <div>
         <div className="assignment-header">
           <h2>Assignment</h2>
         </div>
-        <h2>Take a photo for each of the six dimensions in your new home country</h2>
+        <div className="assignment-container">
+          <img src="https://res.cloudinary.com/dsuhcbmxk/image/upload/v1587064405/5e535ac97371bbe53aa0f8c0_peep-78_1_small_ey9n1l.png" alt="assignment"/>        
+          <p>Take a photo for each of the six dimensions in your new home country</p>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <select
             className="assignment-select"
@@ -89,23 +92,31 @@ class Assignment extends Component {
               indulgence - restraint
             </option>
           </select>
-          <label className="assignment-description">In a few words, how is this photo related to the dimension? Is it in line with Hofstede's value for your new home country?</label>
+
+          <input
+            className="assignment-image"
+            type="file"
+            name="dimension-image"
+            onChange={(e) => this.handleFileUpload(e)}
+          />
+
+            <label className="assignment-description"><p>In a few words, how is this photo related to the dimension? Is it in line with Hofstede's value for your new home country?</p></label>
           <textarea
+          className="assignment-textbox"
+              placeholder="add your answer here"
             type="text"
             name="description"
             value={this.state.description}
             onChange={(e) => this.handleChange(e)}
           />
-          <input
-            type="file"
-            name="dimension-image"
-            onChange={(e) => this.handleFileUpload(e)}
-          />
-          <button type="submit">Save answer</button>
+         
+            <button className="assignment-btn" type="submit"><p>Save answer</p></button>
         </form>
+        
         <Link to="/dimensions">
-          <button className="dimensionsBtn">Back to dimensions menu</button>
+            <button className="assignment-btn"><p>Back to dimensions menu</p></button>
         </Link>
+        </div>
       </div>
     );
   }

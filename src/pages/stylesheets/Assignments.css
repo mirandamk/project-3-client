@@ -21,56 +21,65 @@ flex-direction: column;
   margin: 1%;
 }
 
-.dimensionsBtn {
-  background-color: rgb(226, 194, 226);
-  border-color: rgb(226, 194, 226);
+.assignment-container {
+  background-color: rgb(96, 171, 240);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+    margin: 2%; 
+    height: 5%;
+}
+
+.assignment-container img {
+  width: 40vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
-  bottom: 0;
+  padding-top: 10px;
+}
+
+.assignment-container h4, p {
+  margin: 2%;
+  padding: 2%;
+}
+
+.assignment-select {
+  padding: 2%;
+  margin: 2%;
+  width: 96%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 2px solid rgb(71, 104, 123);
+}
+
+.assignment-image {
+  margin: 2%;
+  padding: 1%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   width: 50%;
+}
+
+textarea {
+  height:13vh;
+    margin: 2%;
+  padding: 2%;
+  border: 2px solid rgb(71, 104, 123);
+}
+
+.assignment-btn{
+  background-color: rgb(71, 104, 123);
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 96%;
   padding: 2%;
   margin: 2%;
-}
-
-
-
-
-.hofstedeForm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: rgb(96, 171, 240);
-    height: 90vh;
-}
-
-.uploadPhotoBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-}
-
-.uploadPhotoSize{
-    width: 20vw;
-    border-style: solid;
-}
-
-.textarea{
-    width: 80vw;
-    height: 20vh;
-    border-color: gray;
-    margin: 10px 0px;
-}
-
-.submitBtn{
-    width: 20vw;
-    background-color: gray;
-    border-style: hidden;
-    height: 5vh;
-    margin: 10px 0px;
+  color:white
 }
