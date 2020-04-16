@@ -47,7 +47,7 @@ class HofstedeIntro extends Component {
             </div>
 
             <div className="btnFooter">
-              <Link to="/weekassignments">
+              <Link to="/startassignments">
                 <button className="backBtn">Back</button>
               </Link>
               <Link to="/countries">

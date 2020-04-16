@@ -42,8 +42,8 @@ class WelcomeAssignment extends Component {
           </Link>
         </div>
 
-        <Link to="/weekassignments">
-          <button className="WABtn">Continue to weekly assignments</button>
+        <Link to="/hofstede-intro">
+          <button className="WABtn">Continue to Hofstede's dimensions</button>
         </Link>
       </div>
     );

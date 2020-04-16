@@ -1,3 +1,5 @@
+// OBS, this one is not in use as today 17/4
+
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../stylesheets/Assignments.css';
@@ -48,7 +50,7 @@ class WeeklyAssignments extends Component {
               </div>
             </div>
             <div className="btnFooter">
-              <Link to="/wassignments">
+              <Link to="/startassignments">
                 <button className="backBtn">Back</button>
               </Link>
             </div>

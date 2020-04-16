@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 
 
 class userWelcome extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
   //   this.state = {
   //     users: [],
@@ -78,7 +78,7 @@ class userWelcome extends Component {
               <img src="../icons/icon_start.png" alt="" className="icon-card" />
             </div>
             <div>
-              <Link to="/wassignments" className="icon">
+              <Link to="/startassignments" className="icon">
                 Start assignments
               </Link>
             </div>
@@ -89,7 +89,7 @@ class userWelcome extends Component {
               <img src="../icons/icon_check.png" alt="" className="icon-card" />
             </div>
             <div>
-              <Link to="/result" className="icon">
+              <Link to="/resultdimensions" className="icon">
                 Check your result
               </Link>
             </div>

@@ -3,14 +3,6 @@ import {Link} from 'react-router-dom';
 import '../stylesheets/General.css';
 
 class Dimensions extends Component {
-    // constructor(props) {
-    //     super(props)
-
-    //     this.state = {
-                 
-    //     }
-    // }
-
     render() {
         return (
           <div>
@@ -21,42 +13,24 @@ class Dimensions extends Component {
             </div>
 
             <div className="welcome-box">
-              <h1>Assignment explanation.</h1>
+              <h1>Now, it is time for you to get to work. </h1>
             </div>
 
             <div className="welcome-box">
-              <Link to="/masculinity" className="icon">
-                <h3>Masculinity</h3>
+              <Link to="/assignments" className="icon">
+                <h3>Make an assignment</h3>
               </Link>
             </div>
 
             <div className="welcome-box">
-              <Link to="/individualism" className="icon">
-                <h3>Individualism</h3>
+              <Link to="/" className="icon">
+                <h3>Check out your photos</h3>
               </Link>
             </div>
 
             <div className="welcome-box">
-              <Link to="/powerdistance" className="icon">
-                <h3>Power distance</h3>
-              </Link>
-            </div>
-
-            <div className="welcome-box">
-              <Link to="/uncertaintyavoidance" className="icon">
-                <h3>Uncertainty avoidance</h3>
-              </Link>
-            </div>
-
-            <div className="welcome-box">
-              <Link to="/longtermorientation" className="icon">
-                <h3>Long term orientation</h3>
-              </Link>
-            </div>
-
-            <div className="welcome-box">
-              <Link to="/indulgence" className="icon">
-                <h3>Indulgence</h3>
+              <Link to="/resultdimensions" className="icon">
+                <h3>Check out dimensions by country</h3>
               </Link>
             </div>
 
@@ -65,7 +39,6 @@ class Dimensions extends Component {
                 <button className="backBtn">Back</button>
               </Link>
             </div>
-            
           </div>
         );
     }
