@@ -16,7 +16,7 @@ class ResultMasculinity extends Component {
   componentDidMount() {
     axios({withCredentials: true,
       method: 'GET',
-      url: 'http://localhost:3000/results/masculinity-feminity' })
+      url: `${process.env.REACT_APP_API}/results/masculinity-feminity` })
       .then((response) => {
         this.setState({ assignments: response.data });
         console.log(response.data);

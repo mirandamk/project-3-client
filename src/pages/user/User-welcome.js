@@ -23,6 +23,21 @@ class userWelcome extends Component {
   //       console.log(err);
   //     });
   // }
+    this.state = {
+      users: [],
+    };
+  }
+  componentDidMount() {
+    axios
+      .get(`${process.env.REACT_APP_API}/user`)
+      .then((response) => {
+        this.setState({ users: response.data });
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   render() {
     // let users = this.state.users;

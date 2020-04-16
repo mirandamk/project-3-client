@@ -3,7 +3,7 @@
 // when user doesn't add a dimension, have an alert box open up
 
 import React, { Component } from 'react';
-// import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import axios from 'axios';
 // import qs from 'qs';
 import service from '../../api/service';
@@ -103,6 +103,9 @@ class Assignment extends Component {
           />
           <button type="submit">Save answer</button>
         </form>
+        <Link to="/dimensions">
+          <button className="dimensionsBtn">Back to dimensions menu</button>
+        </Link>
       </div>
     );
   }
