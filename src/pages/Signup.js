@@ -1,5 +1,6 @@
 import React from 'react';
 import { signup } from "../utils/auth";
+import {Link} from 'react-router-dom';
 
 import './stylesheets/General.css';
 import './stylesheets/Signup.css';
@@ -18,6 +19,8 @@ export default class Signup extends React.Component {
                      lastname: '',
                      email: '',
                      password: '',
+                     home_uni: '',
+                     exchange_uni: ''
                    },
                  };
 
@@ -29,9 +32,9 @@ export default class Signup extends React.Component {
                    });
                  }
 
-                 //push '/' = url extension, to which page will the user go after login
                  // 'login' refers to function in 'utils/auth'
                  handleSubmit() {
+                   debugger
                    signup(this.state.user)
                      .then(() => {
                        this.props.history.push('/login');
@@ -46,8 +49,12 @@ export default class Signup extends React.Component {
                    return (
                      <article className="bg">
                        <div className="sign-up-container">
-                         <h2>Sign up</h2>
+                         <h2>Create a new account</h2>
                          <div className="sign-up-form">
+                           <p className="questionMark">Have an account already? 
+                           <Link to="/login" > Log in
+                           </Link>
+                           </p>
                            <div>
                              <input
                                onChange={this.handleChange}
@@ -95,6 +102,47 @@ export default class Signup extends React.Component {
                              />
                            </div>
                          </div>
+
+                         {/* <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.tel_nr}
+                               name="tel_nr"
+                               type="Number"
+                               placeholder="telephone number"
+                               className="form-section"
+                             />
+                           </div>
+                         </div> */}
+
+                         <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.home_uni}
+                               name="home_uni"
+                               type="text"
+                               placeholder="home university"
+                               className="form-section"
+                             />
+                           </div>
+                         </div>
+
+                         <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.exchange_uni}
+                               name="exchange_uni"
+                               type="text"
+                               placeholder="exchange university"
+                               className="form-section"
+                             />
+                           </div>
+                         </div>
+
+                         
                          <div className="sign-up-form">
                            <div>
                              <input
@@ -107,6 +155,7 @@ export default class Signup extends React.Component {
                              />
                            </div>
                          </div>
+
                        </div>
                        <button
                          className="signup-btn"

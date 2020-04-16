@@ -4,18 +4,24 @@
     background-color: rgb(96, 171, 240);
     border-radius: 2px;
     width: 60vw;
-    height: 75vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 0% auto
+    margin: 2% auto
 }
 
-.signup-form{
+.sign-up-form{
     margin: 10px 0 20px 0px;
 }
 
+.form-section{
+    width: 50vw;
+    height: 8vh;
+    font-size: 2em;
+    font-weight: 200;
+}
 
 .signup-btn{
     background-color: rgb(96, 171, 240);
@@ -30,11 +36,11 @@
 .signup-text{
     font-size: 2em;
     font-weight: 700;
+    padding: 0;
 }
 
-.form-section{
-    width: 50vw;
-    height: 8vh;
-    font-size: 2em;
-    font-weight: 200;
+.questionMark{
+    margin: 0;
+    text-align: -webkit-left;
+    padding: 0% 8% 1%;
 }

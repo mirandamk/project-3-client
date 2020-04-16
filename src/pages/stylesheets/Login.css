@@ -36,4 +36,11 @@
 .login-text{
     font-size: 2em;
     font-weight: 700;
+    padding: 0;
+}
+
+.questionMark{
+    margin: 0;
+    text-align: -webkit-left;
+    padding: 0% 8% 1%;
 }
