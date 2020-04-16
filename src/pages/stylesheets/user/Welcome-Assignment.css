@@ -14,18 +14,41 @@
 .WAInfoFrame{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
     margin: 10px 0 0 30px;
 }
 
 .WAPeep{
-    width: 20vh;
-    margin: 150px 0 0 0px;
+    height: 40vh;
+    margin: -230px 0% 0% -1%;
+    /* width: 20vh;
+    margin: 150px 0 0 0px; */
 }
 
 .WApara{
-    margin: 0px 10px 0px 0px;
+    margin: 0px 10px 0px 20px;
     text-align: -webkit-center;
     display: block;
+}
+
+.intercultural-info{
+    margin: 0 0 0 10%;
+    padding: 0% 3% 1% 20%;
+    text-align: left;
+}
+
+.intercultural-qoute{
+    margin: 2% 0% 0% 55%;
+    position: relative;
+}
+
+.WABackBtn{
+    background-color: rgb(226, 194, 226);
+    border-color: rgb(226, 194, 226);
+    width: 90px;
+    height: 30px;
+    margin: 0% 0% 0% -44%;
+    position: absolute;
 }
 
 .WABtn{
