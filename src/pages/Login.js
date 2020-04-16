@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { login } from '../utils/auth';
-
-// import './stylesheets/Login.css';
+import './stylesheets/General.css';
+import './stylesheets/Login.css';
 
 // import axios from 'axios';
 // import qs from 'qs';
@@ -23,12 +23,11 @@ export default class Login extends Component {
     });
   }
 
-  //push '/' = url extension, to which page will the user go after login
   // 'login' refers to function in 'utils/auth'
   handleSubmit(event) {
     login(this.state)
       .then(() => {
-        this.props.history.push('/');
+        this.props.history.push('/user');
         console.log(this.state.user);
       })
       .catch((err) => {
@@ -38,38 +37,44 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="login-container">
-        <h2>Log in</h2>
-        <div className="login-form">
-          <label>Username</label>
-          <div>
-            <input
-              onChange={this.handleChange}
-              value={this.state.username}
-              name="username"
-              type="text"
-              placeholder="username"
-              className="form-section"
-            />
+      <article className="bg">
+        <div className="login-container">
+          <h2>Log in</h2>
+          <div className="login-form">
+            <label>
+              {/* <h3>Username</h3> */}
+            </label>
+            <div>
+              <input
+                onChange={this.handleChange}
+                value={this.state.username}
+                name="username"
+                type="text"
+                placeholder="username"
+                className="form-section"
+              />
+            </div>
           </div>
-        </div>
-        <div className="login-form">
-          <label>Password</label>
-          <div>
-            <input
-              onChange={this.handleChange}
-              value={this.state.password}
-              name="password"
-              type="password"
-              placeholder="password"
-              className="form-section"
-            />
+          <div className="login-form">
+            <label>
+              {/* <h3>Password</h3> */}
+            </label>
+            <div>
+              <input
+                onChange={this.handleChange}
+                value={this.state.password}
+                name="password"
+                type="password"
+                placeholder="password"
+                className="form-section"
+              />
+            </div>
           </div>
         </div>
         <button className="login-btn" onClick={this.handleSubmit}>
-          Log in
+          <p className="login-text">LOG IN</p>
         </button>
-      </div>
+      </article>
     );
   }
 }

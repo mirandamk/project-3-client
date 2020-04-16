@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './stylesheets/General.css';
 import './stylesheets/Home.css';
 // import Signup from './Signup.js';
 // import Login from './Login.js';
