@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { login } from '../utils/auth';
+import { Link } from 'react-router-dom';
 import './stylesheets/General.css';
 import './stylesheets/Login.css';
 
@@ -41,9 +42,9 @@ export default class Login extends Component {
         <div className="login-container">
           <h2>Log in</h2>
           <div className="login-form">
-            <label>
-              {/* <h3>Username</h3> */}
-            </label>
+            <p className="questionMark">Don't have an account? <Link to="/signup" > Create
+                           </Link>
+            </p>
             <div>
               <input
                 onChange={this.handleChange}
@@ -56,9 +57,6 @@ export default class Login extends Component {
             </div>
           </div>
           <div className="login-form">
-            <label>
-              {/* <h3>Password</h3> */}
-            </label>
             <div>
               <input
                 onChange={this.handleChange}
