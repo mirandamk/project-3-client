@@ -3,22 +3,24 @@
 import React, { Component } from 'react';
 // import '../stylesheets/Users.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
-class userAssignments extends Component {
+class ResultMasculinity extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      user: null
-    };
+  this.state = {
+      assignments: [],
+    }
   }
+
   componentDidMount() {
-    axios
-      .get('http://localhost:3000/userassignments')
+    axios({withCredentials: true,
+      method: 'GET',
+      url: 'http://localhost:3000/results/masculinity-feminity' })
       .then((response) => {
-        this.setState({ user: response.data });
+        this.setState({ assignments: response.data });
         console.log(response.data);
       })
       .catch((err) => {
@@ -27,20 +29,45 @@ class userAssignments extends Component {
   }
 
   render() {
-    let user = this.state.user;
+    
+    let assignments = this.state.assignments;
 
     return (
       <div>
-            <article className="bg">
-              <div className="user-header">
-            {this.state.user && <h1>{this.state.user.firstname}</h1>}
+        <h5>Text at the top</h5>
+      
+      <div>
+        <h5>See Result Masculinity</h5>
+        <div className="result-mas">
+          {assignments.map((assignment) => {
+            return (
+              <div>
+               <h5>{assignment.description}</h5>
+
+                <p>{assignment.dimension}</p>
+                <img  src={assignment.image} alt="assignment" />
               </div>
-            </article>
+            )
+          })}
+          </div>
+        </div>
+      </div>
+    )}
+        }
+        
+export default ResultMasculinity;
+
+
+
+//             {/* <article className="bg">
+//             <div>Hello </div>
+//               <div className="user-header">
+//             {this.state.description && <h1>{this.state.assignments.description}</h1>}
+//               </div>
+//             </article> */}
           
         
-      </div>
-    );
-  }
-}
-
-export default userAssignments;
+// //       </div>
+// //     );
+// //   }
+// // }

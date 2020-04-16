@@ -2,7 +2,7 @@
 
 import Axios from 'axios';
 // import qs from 'qs';
-var qs = require('qs');
+// var qs = require('qs');
 // import { createBrowserHistory } from 'history';
 // const history = createBrowserHistory();
 

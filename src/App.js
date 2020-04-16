@@ -12,7 +12,6 @@ import WeeklyAssignments from './pages/assignments/WeeklyAssignments';
 import HofstedeCountries from './pages/assignments/HofstedeCountries';
 import HofstedeIntro from './pages/assignments/HofstedeIntro';
 import Dimensions from './pages/assignments/Dimensions';
-import PhotoMasculinity from './pages/assignments/PhotoMasculinity'
 import ResultMasculinity from './pages/assignments/ResultMasculinity'
 import Signup from './pages/Signup';
 // import Individualism from './pages/assignments/Individualism';
