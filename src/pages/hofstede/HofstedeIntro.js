@@ -18,8 +18,13 @@ class HofstedeIntro extends Component {
                 Explanation Hofstede’s dimensions + link to website hofstede for
                 more info + info assignment
                 <br></br>
-                Want to read more about Hofstede and his dimension? 
-                <a href="https://www.hofstede-insights.com/" target="_blank">
+                Want to read more about Hofstede and his dimension?
+                <a
+                  href="https://www.hofstede-insights.com/"
+                  target="_blank"
+                  without
+                  rel="noopener noreferrer"
+                >
                   Click here.
                 </a>
                 <br></br>

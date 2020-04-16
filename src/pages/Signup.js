@@ -1,7 +1,8 @@
 import React from 'react';
 import { signup } from "../utils/auth";
 
-// import './stylesheets/Signup.css';
+import './stylesheets/General.css';
+import './stylesheets/Signup.css';
 
 export default class Signup extends React.Component {
                  constructor(props) {
@@ -43,80 +44,77 @@ export default class Signup extends React.Component {
 
                  render() {
                    return (
-                     <div className="sign-up-container">
-                       <h2>Sign up</h2>
-                       <div className="sign-up-form">
-                         <label>Username</label>
-                         <div>
-                           <input
-                             onChange={this.handleChange}
-                             value={this.state.username}
-                             name="username"
-                             type="text"
-                             placeholder="username"
-                             className="form-section"
-                           />
+                     <article className="bg">
+                       <div className="sign-up-container">
+                         <h2>Sign up</h2>
+                         <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.username}
+                               name="username"
+                               type="text"
+                               placeholder="username"
+                               className="form-section"
+                             />
+                           </div>
                          </div>
-                       </div>
-                       <div className="sign-up-form">
-                         <label>First Name</label>
-                         <div>
-                           <input
-                             onChange={this.handleChange}
-                             value={this.state.firstname}
-                             name="firstname"
-                             type="text"
-                             placeholder="firstname"
-                             className="form-section"
-                           />
+                         <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.firstname}
+                               name="firstname"
+                               type="text"
+                               placeholder="firstname"
+                               className="form-section"
+                             />
+                           </div>
                          </div>
-                       </div>
-                       <div className="sign-up-form">
-                         <label>Last Name</label>
-                         <div>
-                           <input
-                             onChange={this.handleChange}
-                             value={this.state.lastname}
-                             name="lastname"
-                             type="text"
-                             placeholder="lastname"
-                             className="form-section"
-                           />
+                         <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.lastname}
+                               name="lastname"
+                               type="text"
+                               placeholder="lastname"
+                               className="form-section"
+                             />
+                           </div>
                          </div>
-                       </div>
-                       <div className="sign-up-form">
-                         <label>E-mail</label>
-                         <div>
-                           <input
-                             onChange={this.handleChange}
-                             value={this.state.email}
-                             name="email"
-                             type="text"
-                             placeholder="email"
-                             className="form-section"
-                           />
+                         <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.email}
+                               name="email"
+                               type="text"
+                               placeholder="email"
+                               className="form-section"
+                             />
+                           </div>
                          </div>
-                       </div>
-                       <div className="sign-up-form">
-                         <label>Password</label>
-                         <div>
-                           <input
-                             onChange={this.handleChange}
-                             value={this.state.password}
-                             name="password"
-                             type="password"
-                             placeholder="password"
-                             className="form-section"
-                           />
+                         <div className="sign-up-form">
+                           <div>
+                             <input
+                               onChange={this.handleChange}
+                               value={this.state.password}
+                               name="password"
+                               type="password"
+                               placeholder="password"
+                               className="form-section"
+                             />
+                           </div>
                          </div>
                        </div>
                        <button
                          className="signup-btn"
                          onClick={this.handleSubmit}
                        >
-                         Sign Up
+                         <p className="signup-text">SIGN UP</p>
                        </button>
-                     </div>
+                     </article>
                    );
                  }
                }

@@ -1,1 +1,40 @@
 /* Stylesheet to be user at /signup */
+
+.sign-up-container{
+    background-color: rgb(96, 171, 240);
+    border-radius: 2px;
+    width: 60vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0% auto
+}
+
+.signup-form{
+    margin: 10px 0 20px 0px;
+}
+
+
+.signup-btn{
+    background-color: rgb(96, 171, 240);
+    border-radius: 2px;
+    width: 60vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    margin: 5% auto;
+}
+
+.signup-text{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.form-section{
+    width: 50vw;
+    height: 8vh;
+    font-size: 2em;
+    font-weight: 200;
+}
