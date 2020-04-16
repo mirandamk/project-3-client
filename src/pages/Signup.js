@@ -19,8 +19,8 @@ export default class Signup extends React.Component {
                      lastname: '',
                      email: '',
                      password: '',
-                     home_uni: '',
-                     exchange_uni: ''
+                    //  home_uni: '',
+                    //  exchange_uni: ''
                    },
                  };
 
@@ -116,7 +116,7 @@ export default class Signup extends React.Component {
                            </div>
                          </div> */}
 
-                         <div className="sign-up-form">
+                         {/* <div className="sign-up-form">
                            <div>
                              <input
                                onChange={this.handleChange}
@@ -127,9 +127,9 @@ export default class Signup extends React.Component {
                                className="form-section"
                              />
                            </div>
-                         </div>
+                         </div> */}
 
-                         <div className="sign-up-form">
+                         {/* <div className="sign-up-form">
                            <div>
                              <input
                                onChange={this.handleChange}
@@ -140,7 +140,7 @@ export default class Signup extends React.Component {
                                className="form-section"
                              />
                            </div>
-                         </div>
+                         </div> */}
 
                          
                          <div className="sign-up-form">

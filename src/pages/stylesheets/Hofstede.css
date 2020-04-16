@@ -52,8 +52,27 @@
 .hofstedeBox{
     background-color: rgb(96, 171, 240);
     margin: 2% 8%;
-    height: 500px;
+    height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: -webkit-center;
 }
+
+
+.HI-header{
+    text-align: -webkit-center
+}
+
+ul{
+    list-style: inside;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 0;
+}
+li{
+    margin: 0% 0% 1% 5%;
+    text-align: left;
+}
+

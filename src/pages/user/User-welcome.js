@@ -23,10 +23,11 @@ class userWelcome extends Component {
   //       console.log(err);
   //     });
   // }
-    this.state = {
-      users: [],
-    };
-  }
+  //   this.state = {
+  //     users: [],
+  //   };
+    
+  // }
   componentDidMount() {
     axios
       .get(`${process.env.REACT_APP_API}/user`)
