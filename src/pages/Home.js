@@ -1,7 +1,7 @@
 //Note: Emilie, are we still using this page, or is this replaced by one of the pages in the 'user' folder?
 // ==>This one is still in use, this file was earlier called User.js, but is now replaced. These comment lines can be removed.
 import React, { Component } from 'react';
-import './stylesheets/Users.css';
+import './stylesheets/Home.css';
 import axios from 'axios';
 // import Signup from './Signup.js';
 // import Login from './Login.js';

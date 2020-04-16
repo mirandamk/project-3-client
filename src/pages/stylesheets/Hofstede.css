@@ -1,0 +1,59 @@
+/*http://localhost:3000/(HofstedeCountries.js)*/
+
+.hofstedeCountryBox{
+    background-color: rgb(96, 171, 240);
+    margin: 2% 8%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: -webkit-center;
+}
+.countryList{
+    margin: -160px 0px 10px 100px;
+    position: absolute;
+}
+
+.countryListHeader{
+    background-color: rgb(226, 194, 226);
+    padding: 5px 10px;
+}
+
+.HCPeep{
+    width: 12vw;
+    position: fixed;
+    margin: 80px 0px 0px 10px;
+}
+
+/*http://localhost:3000/(CountryDetail.js)*/
+.CDBox{
+    position: absolute;
+    margin: -10% 0% 10% 20%;
+}
+
+.CSHeader{
+    background-color: thistle;
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+}
+
+.CDImg{
+    width: 60vw;
+}
+
+/*http://localhost:3000/(CountryList.js)*/
+.countryListPoints{
+    text-align: -webkit-left;
+}
+
+/*http://localhost:3000/(HofstedeIntro.js)*/
+
+.hofstedeBox{
+    background-color: rgb(96, 171, 240);
+    margin: 2% 8%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: -webkit-center;
+}

@@ -1,0 +1,38 @@
+.WABackground{
+    background-color: rgb(96, 171, 240);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.WAHeader{
+    margin: 10px 0px 0 90px;
+}
+
+.WAInfoFrame{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 30px;
+}
+
+.WAPeep{
+    width: 20vh;
+    margin: 150px 0 0 0px;
+}
+
+.WApara{
+    margin: 0px 10px 0px 0px;
+    text-align: -webkit-center;
+    display: block;
+}
+
+.WABtn{
+    background-color: rgb(71, 104, 123);
+    border-color: rgb(71, 104, 123);
+    color: white;
+    font-weight: 900;
+    width: 100vw;
+    height: 10vh;
+}

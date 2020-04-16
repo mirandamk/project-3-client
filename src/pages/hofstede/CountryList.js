@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheets/Assignments.css';
+import '../stylesheets/Hofstede.css';
 
 class CountryList extends Component {
   render() {

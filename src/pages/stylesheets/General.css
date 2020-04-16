@@ -8,49 +8,25 @@
     background-repeat: no-repeat;
 }
 
-/*http://localhost:3000/(Users.js)*/
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.signupBtn{
-    background-color: rgb(96, 171, 240);
-    border-color: rgb(96, 171, 240);
-    border-radius: 2px;
-    width: 230px;
-    height: 90px;
-}
-
-.signupBtn a{
-    size: 30px;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.loginBtn{
-    background-color: rgb(226, 194, 226);
-    border-color: rgb(226, 194, 226);
-    border-radius: 2px;
-    width: 230px;
-    height: 90px;
-}
-
-.loginBtn a{
-    size: 30px;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-/*http://localhost:3000/user(User-welcome.js)*/
 .user-header{
     background-color: rgb(71, 104, 123);
     margin: 2% 8%;
     height: 60px;
     display: flex;
     justify-content: center;
+}
+
+/*http://localhost:3000/(WeeklyAssignments.js)*/
+.assignBox{
+    background-image: url('/icons/peep_w2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 50em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .welcome-box{
@@ -69,10 +45,6 @@
     margin: auto 10%;
 }
 
-.icon-card{
-    width: 11vw;
-}
-
 .icon{
     font-weight: 400;
     font-size: 20px;
@@ -81,3 +53,29 @@
     align-content: center;
 }
 
+.icon-card{
+    width: 11vw;
+}
+
+
+
+/*Buttons as a footer*/
+.btnFooter{
+    margin: 2% 8%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Back button*/
+.backBtn{
+    background-color: rgb(226, 194, 226);
+    border-color: rgb(226, 194, 226);
+    width: 40vw;
+}
+/*Next button*/
+.nextBtn{
+    background-color: rgb(71, 104, 123);
+    border-color: rgb(71, 104, 123);
+    width: 40vw;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../stylesheets/Assignments.css';
+import '../stylesheets/user/Welcome-Assignment.css';
+import '../stylesheets/General.css';
 import {Link} from 'react-router-dom';
 // import WeeklyAssignments from './WeeklyAssignments';
 
@@ -16,10 +17,6 @@ class WelcomeAssignment extends Component {
         <div className="WAHeader">
           <h2>Time to start doing</h2>
         </div>
-
-        {/* <div className="test">
-          <img src="../icons/peep_w1.png" alt="" className="WAPeep" />
-        </div> */}
 
         <div className="WAInfoFrame">
           <img src="../icons/peep_w1.png" alt="" className="WAPeep" />

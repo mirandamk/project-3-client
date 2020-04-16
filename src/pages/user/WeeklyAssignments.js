@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../stylesheets/Assignments.css';
+import '../stylesheets/General.css';
 
 class WeeklyAssignments extends Component {
     constructor(props) {
