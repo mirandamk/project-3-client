@@ -62,21 +62,25 @@ class Assignment extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Select dimension</h2>
+      <div className="assignment-container">
+        <div className="assignment-header">
+          <h2>Assignment</h2>
+        </div>
+        <h2>Take a photo for each of the six dimensions in your new home country</h2>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <select
+            className="assignment-select"
             onChange={(e) => this.handleChange(e)}
             name="dimension"
             default
             value={this.state.dimension}
           >
             <option>Choose a dimension</option>
-            <option value="power distance">power distance</option>
+            <option value="power distance">Power distance</option>
             <option value="individualism-collectivism">
-              individualism-collectivism
+              Individualism-collectivism
             </option>
-            <option value="masculinity-feminity">masculinity-feminity</option>
+            <option value="masculinity-feminity">Masculinity-feminity</option>
             <option value="uncertainty avoidance">uncertainty avoidance</option>
             <option value="long term - short term orientation">
               long term - short term orientation
@@ -85,7 +89,7 @@ class Assignment extends Component {
               indulgence - restraint
             </option>
           </select>
-          <label>Description</label>
+          <label className="assignment-description">In a few words, how is this photo related to the dimension? Is it in line with Hofstede's value for your new home country?</label>
           <textarea
             type="text"
             name="description"

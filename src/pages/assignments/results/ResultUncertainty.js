@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import '../stylesheets/Users.css';
+import './Result.css';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class ResultUncertainty extends Component {
@@ -33,24 +33,29 @@ class ResultUncertainty extends Component {
     let assignments = this.state.assignments;
 
     return (
-      <div>
-        <h5>Text at the top</h5>
-
-        <div>
-          <h5>See Result Masculinity</h5>
-          <div className="result-mas">
-            {assignments.map((assignment) => {
-              return (
-                <div>
-                  <h5>{assignment.description}</h5>
-
-                  <p>{assignment.dimension}</p>
+      <div className="result-container">
+        <div className="result-header">
+          <h2>Results Uncertainty Avoidance</h2>
+        </div>
+        <div className="result-body">
+          {assignments.map((assignment) => {
+            return (
+              <>
+                <div className="result-image">
                   <img src={assignment.image} alt="assignment" />
                 </div>
-              )
-            })}
-          </div>
+
+                <div className="result-answer">
+                  <h4>How does this relate to the dimension {assignment.dimension}?</h4>
+                  <p>{assignment.description}</p>
+                </div>
+              </>
+            )
+          })}
         </div>
+        <Link to="/dimensions">
+          <button className="dimensionsBtn">Back to dimensions menu</button>
+        </Link>
       </div>
     )
   }

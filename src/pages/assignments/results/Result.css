@@ -1,10 +1,12 @@
 /* is the same as user -> userheader */
 .result-header {
-    background-color: rgb(71, 104, 123);
-    margin: 2%; 
-    height: 5%;
-    display: flex;
-    justify-content: center;
+  background-color: rgb(71, 104, 123);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 97%;
+  margin: 2%;
+  height: 5%;
 }
 
 .result-header h2 {
@@ -22,10 +24,29 @@
 }
 
 .result-answer {
-    background-color: rgb(96, 171, 240);
-    margin: 2% 8%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    text-align: -webkit-center;
+  background-color: rgb(96, 171, 240);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 97%;
+  margin-top: 2%;
+}
+
+.result-answer h4,
+p {
+  margin: 2%;
+  padding: 3%;
+}
+
+.dimensionsBtn {
+  background-color: rgb(226, 194, 226);
+  border-color: rgb(226, 194, 226);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 0;
+  width: 96%;
+  padding: 2%;
+  margin: 2%;
 }

@@ -33,7 +33,7 @@ class ResultMasculinity extends Component {
     return (
       <div className="result-container">
           <div className="result-header">
-            <h2>Results Masculinity-Femininity</h2>
+            <h2>Results Masculinity - Femininity</h2>
           </div>
           <div className="result-body">
             {assignments.map((assignment) => {
@@ -44,12 +44,16 @@ class ResultMasculinity extends Component {
                 </div>
                 
                 <div className="result-answer">
-                  <h5>{assignment.description}</h5>
+                  <h4>How does this relate to the dimension {assignment.dimension}?</h4>
+                  <p>{assignment.description}</p>
                 </div> 
                 </>               
               )
             })}        
           </div>
+        <Link to="/dimensions">
+          <button className="dimensionsBtn">Back to dimensions menu</button>
+        </Link>
       </div>
     )
   }

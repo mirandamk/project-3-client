@@ -1,4 +1,25 @@
 /*http://localhost:3000/(eachofthedimensionpages)*/
+.assignment-container{
+  
+}
+
+.assignment-header{
+    background-color: rgb(71, 104, 123);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+    margin: 2%; 
+    height: 5%;
+}
+
+.assignment-header h2 {
+  color: white;
+  text-align: center;
+  padding: 1%;
+  margin: 1%;
+}
+
 .hofstedeForm{
     display: flex;
     justify-content: center;
@@ -36,5 +57,3 @@
     height: 5vh;
     margin: 10px 0px;
 }
-
-
