@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 
 
 class userWelcome extends Component {
-  // constructor(props) {
-  //   super(props);
+  constructor(props) {
+    super(props);
 
   //   this.state = {
   //     users: [],
