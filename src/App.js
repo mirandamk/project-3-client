@@ -7,10 +7,10 @@ import { Switch, Route } from 'react-router-dom';
 import Assignments from './pages/assignments/Assignments';
 import Home from './pages/Home';
 import Masculinity from './pages/assignments/Masculinity';
-import WelcomeAssignment from './pages/assignments/Welcome-assignment';
-import WeeklyAssignments from './pages/assignments/WeeklyAssignments';
-import HofstedeCountries from './pages/assignments/HofstedeCountries';
-import HofstedeIntro from './pages/assignments/HofstedeIntro';
+import WelcomeAssignment from './pages/user/Welcome-assignment';
+import WeeklyAssignments from './pages/user/WeeklyAssignments';
+import HofstedeCountries from './pages/hofstede/HofstedeCountries';
+import HofstedeIntro from './pages/hofstede/HofstedeIntro';
 import Dimensions from './pages/assignments/Dimensions';
 import ResultMasculinity from './pages/assignments/ResultMasculinity'
 import Signup from './pages/Signup';

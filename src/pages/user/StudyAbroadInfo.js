@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../stylesheets/Users.css';
+import '../stylesheets/General.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -11,17 +11,17 @@ class StudyAbroadInfo extends Component {
   //     users: [],
   //   };
   // }
-  componentDidMount() {
-    axios
-      .get('http://localhost:3000/user')
-      .then((response) => {
-        this.setState({ users: response.data });
-        console.log(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+  // componentDidMount() {
+  //   axios
+  //     .get('http://localhost:3000/user')
+  //     .then((response) => {
+  //       this.setState({ users: response.data });
+  //       console.log(response.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }
 
   render() {
     // let users = this.state.users;

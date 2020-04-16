@@ -3,7 +3,8 @@ import {Link, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import CountryDetail from './CountryDetail';
 import CountryList from './CountryList';
-import '../stylesheets/Assignments.css';
+import '../stylesheets/General.css';
+import '../stylesheets/Hofstede.css';
 
 class HofstedeCountries extends Component {
     constructor(props) {

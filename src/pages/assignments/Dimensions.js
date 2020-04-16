@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import '../stylesheets/General.css';
 
 class Dimensions extends Component {
     // constructor(props) {

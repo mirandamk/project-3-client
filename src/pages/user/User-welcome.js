@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../stylesheets/Users.css';
+import '../stylesheets/General.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
@@ -75,7 +75,7 @@ class userWelcome extends Component {
                   />
                 </div>
                 <div>
-                  <Link to="/assignments" className="icon">
+                  <Link to="/wassignments" className="icon">
                     Start assignments
                   </Link>
                 </div>

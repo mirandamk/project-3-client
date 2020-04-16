@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../stylesheets/Assignments.css';
+import '../stylesheets/Hofstede.css';
 
 class CountryDetail extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class CountryDetail extends Component {
         (ctr) => ctr.name === this.props.match.params.name);
       }
     return (
-      <div className="CountryDetailBox">
-          <h2>{this.props.match.params.name}</h2>
+      <div className="CDBox">
+          <h2 className="CDHeader">{this.props.match.params.name}</h2>
           <img
             src={country.image}
             alt="aint working babe"
-            className="countryImg"
+            className="CDImg"
           />
       </div>
     );
