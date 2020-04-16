@@ -29,7 +29,7 @@ class PhotoMasculinity extends Component {
   photomasculinity(e) {
     e.preventDefault();
     axios({
-      url: 'http://localhost:3000/assignments',
+      url: `${process.env.REACT_APP_API}/assignments`,
       data: qs.stringify(this.state),
       method: 'POST',
       withCredentials: true

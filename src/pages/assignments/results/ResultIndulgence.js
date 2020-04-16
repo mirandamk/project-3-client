@@ -17,7 +17,7 @@ class ResultIndulgence extends Component {
     axios({
       withCredentials: true,
       method: 'GET',
-      url: 'http://localhost:3000/results/indulgence-restraint'
+      url: `${process.env.REACT_APP_API}/results/indulgence-restraint`
     })
       .then((response) => {
         this.setState({ assignments: response.data });

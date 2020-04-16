@@ -17,7 +17,7 @@ class ResultUncertainty extends Component {
     axios({
       withCredentials: true,
       method: 'GET',
-      url: 'http://localhost:3000/results/uncertainty-avoidance'
+      url: `${process.env.REACT_APP_API}/results/uncertainty-avoidance`
     })
       .then((response) => {
         this.setState({ assignments: response.data });

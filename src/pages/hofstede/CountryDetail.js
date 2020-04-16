@@ -11,7 +11,7 @@ class CountryDetail extends Component {
   }
   componentDidMount() {
     axios
-      .get('http://localhost:3000/countries')
+      .get(`${process.env.REACT_APP_API}/countries`)
       .then((response) => {
         console.log(response.data);
         this.setState({ countries: response.data });

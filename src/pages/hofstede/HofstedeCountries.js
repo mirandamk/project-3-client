@@ -16,7 +16,7 @@ class HofstedeCountries extends Component {
     }
 componentDidMount(){
     axios
-        .get('http://localhost:3000/countries')
+      .get(`${process.env.REACT_APP_API}/countries`)
         .then((response) => {
             this.setState({ countries: response.data });
         })

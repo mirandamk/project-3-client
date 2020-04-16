@@ -17,7 +17,7 @@ class ResultPowerDistance extends Component {
     axios({
       withCredentials: true,
       method: 'GET',
-      url: 'http://localhost:3000/results/power-distance'
+      url: `${process.env.REACT_APP_API}/results/power-distance`
     })
       .then((response) => {
         this.setState({ assignments: response.data });

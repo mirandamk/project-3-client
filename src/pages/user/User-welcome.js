@@ -14,7 +14,7 @@ class userWelcome extends Component {
   }
   componentDidMount() {
     axios
-      .get('http://localhost:3000/user')
+      .get(`${process.env.REACT_APP_API}/user`)
       .then((response) => {
         this.setState({ users: response.data });
         console.log(response.data);

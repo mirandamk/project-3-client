@@ -17,7 +17,7 @@ class ResultIndividualism extends Component {
     axios({
       withCredentials: true,
       method: 'GET',
-      url: 'http://localhost:3000/results/individualism-collectivism'
+      url: `${process.env.REACT_APP_API}/results/individualism-collectivism`
     })
       .then((response) => {
         this.setState({ assignments: response.data });
