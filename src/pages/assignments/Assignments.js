@@ -112,6 +112,10 @@ class Assignment extends Component {
          
             <button className="assignment-btn" type="submit"><p>Save answer</p></button>
         </form>
+
+          <Link to="/resultdimensions">
+            <button className="assignment-btn"><p>Check out your photos</p></button>
+          </Link>
         
         <Link to="/dimensions">
             <button className="assignment-btn"><p>Back to dimensions menu</p></button>

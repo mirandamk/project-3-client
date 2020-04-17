@@ -24,7 +24,6 @@ import ResultPowerDistance from './pages/assignments/results/ResultPowerDistance
 import ResultUncertainty from './pages/assignments/results/ResultUncertainty';
 import ResultLongTerm from './pages/assignments/results/ResultLongTerm';
 import ResultIndulgence from './pages/assignments/results/ResultIndulgence';
-
   /* Following are existing pages, but that we do not use for now */
 import WeeklyAssignments from './pages/user/WeeklyAssignments';
 import PhotoMasculinity from './pages/assignments/PhotoMasculinity';
@@ -52,6 +51,7 @@ class App extends Component {
           <Route path="/assignments" component={Assignments} />
           {/* <Route path="/checkphotos" component={CheckPhotos} /> // Obs, this does not exist for now. */}
           {/* // */}
+
           <Route path="/resultmasculinity" component={ResultMasculinity} />
           <Route path="/resultIndividualism" component={ResultIndividualism} />
           <Route path="/resultpowerdistance" component={ResultPowerDistance} />

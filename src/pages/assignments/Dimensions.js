@@ -8,7 +8,7 @@ class Dimensions extends Component {
           <div>
             <div>
               <div className="user-header">
-                <h2>Assignments Week 6-15</h2>
+                <h2>Assignment Menu</h2>
               </div>
             </div>
 
@@ -22,15 +22,15 @@ class Dimensions extends Component {
               </Link>
             </div>
 
-            <div className="welcome-box">
+            {/* <div className="welcome-box">
               <Link to="/" className="icon">
                 <h3>Check out your photos</h3>
               </Link>
-            </div>
+            </div> */}
 
             <div className="welcome-box">
               <Link to="/resultdimensions" className="icon">
-                <h3>Check out dimensions by country</h3>
+                <h3>Check out you photos</h3>
               </Link>
             </div>
 

@@ -1,4 +1,57 @@
 /* is the same as user -> userheader */
+
+/*result menu*/
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
+  ;
+}
+
+.result-box{ 
+  background-color: rgb(96, 171, 240);
+  border: none;
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  padding: 1%;
+  margin: 2%;
+  display: flex;
+  flex-direction: column; 
+  /* align-items: center; */
+  /* text-align: center;  */
+  /* align-items: center;  */
+
+}
+
+.result-box h4 {
+  /* display: flex; */
+  text-align: center;
+  margin: 2%;
+  padding: 2%;
+}
+
+.result-btn{
+  background-color: rgb(226, 194, 226);
+  border: none;
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  padding: 1%;
+  margin: 2%;
+  text-align: center;
+}
+
+.result-btn h4 {
+  margin: 2%;
+  padding: 2%;
+  /* display: inline-block */
+}
+
+/* per dimension results */
 .result-header {
   background-color: rgb(71, 104, 123);
   display: block;

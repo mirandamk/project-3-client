@@ -2,6 +2,8 @@
 form {
 display: flex;
 flex-direction: column;
+margin: 0px;
+padding: 0px; 
 }
 
 .assignment-header{
@@ -29,10 +31,11 @@ flex-direction: column;
     width: 97%;
     margin: 2%; 
     height: 5%;
+    border-bottom: 2px solid  rgb(96, 171, 240) ;
 }
 
 .assignment-container img {
-  width: 40vw;
+  width: 35vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -40,6 +43,8 @@ flex-direction: column;
 }
 
 .assignment-container h4, p {
+   color: white;
+  text-align: center;
   margin: 2%;
   padding: 2%;
 }
@@ -56,7 +61,7 @@ flex-direction: column;
 }
 
 .assignment-image {
-  margin: 2%;
+  margin-top: 2%;
   padding: 1%;
   text-align: center;
   display: block;
@@ -66,7 +71,7 @@ flex-direction: column;
 }
 
 textarea {
-  height:13vh;
+  height:11vh;
     margin: 2%;
   padding: 2%;
   border: 2px solid rgb(71, 104, 123);
@@ -79,7 +84,7 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   width: 96%;
-  padding: 2%;
+  padding: 1%;
   margin: 2%;
   color:white;
 }
