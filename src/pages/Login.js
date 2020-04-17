@@ -26,6 +26,7 @@ export default class Login extends Component {
 
   // 'login' refers to function in 'utils/auth'
   handleSubmit(event) {
+    event.preventDefault();
     login(this.state)
       .then(() => {
         this.props.history.push('/dimensions');
