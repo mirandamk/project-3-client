@@ -33,6 +33,10 @@
   padding: 2%;
 }
 
+.result-box Link {
+  text-align: center; 
+}
+
 .result-btn{
   background-color: rgb(226, 194, 226);
   border: none;

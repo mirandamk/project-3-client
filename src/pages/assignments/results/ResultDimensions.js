@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import './Result.css'
+import '../../stylesheets/Result.css';
 
 class ResultDimensions extends Component {
   render() {
