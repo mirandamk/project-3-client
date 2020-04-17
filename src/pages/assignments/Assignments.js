@@ -79,11 +79,11 @@ class Assignment extends Component {
             value={this.state.dimension}
           >
             <option>Choose a dimension</option>
-            <option value="power distance">Power distance</option>
+            <option value="power-distance">Power-distance</option>
             <option value="individualism-collectivism">
               Individualism-collectivism
             </option>
-            <option value="masculinity-feminity">Masculinity-feminity</option>
+            <option value="masculinity-feminity">masculinity-feminity</option>
             <option value="uncertainty avoidance">uncertainty avoidance</option>
             <option value="long term - short term orientation">
               long term - short term orientation

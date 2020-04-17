@@ -53,7 +53,7 @@ componentDidMount(){
               </div>
 
 
-                <img src="../icons/peep_w6.png" alt="x" className="HCPeep"/>
+              <img src="https://res.cloudinary.com/dsuhcbmxk/image/upload/v1587125623/Hofstede%20Countries/peep_w6_pcvkix.png " alt="x" className="HCPeep"/>
 
             </div>
 

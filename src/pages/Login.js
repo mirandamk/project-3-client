@@ -29,7 +29,7 @@ export default class Login extends Component {
     event.preventDefault();
     login(this.state)
       .then(() => {
-        this.props.history.push('/dimensions');
+        this.props.history.push('/user');
         console.log(this.state.user);
       })
       .catch((err) => {

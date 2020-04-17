@@ -19,7 +19,7 @@ class WelcomeAssignment extends Component {
         </div>
 
         <div className="WAInfoFrame">
-          <img src="../icons/peep_w1.png" alt="" className="WAPeep" />
+          <img src="https://res.cloudinary.com/dsuhcbmxk/image/upload/v1587126534/Hofstede%20Countries/peep_w1_dvm1ge.png " alt="" className="WAPeep" />
 
           <div className="WApara">
             <h3 className="intercultural-info">"Wait, stop, what? What are they doing!?"</h3>
