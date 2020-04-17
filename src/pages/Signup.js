@@ -34,7 +34,7 @@ export default class Signup extends React.Component {
 
                  // 'login' refers to function in 'utils/auth'
                  handleSubmit() {
-                   debugger
+                   //debugger
                    signup(this.state.user)
                      .then(() => {
                        this.props.history.push('/login');

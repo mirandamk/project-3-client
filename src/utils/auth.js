@@ -1,7 +1,7 @@
 //Note: copied from Jurgen and the Beer API assignment. Not entirely sure what is doing what. 
 
 import Axios from 'axios';
-// import qs from 'qs';
+import qs from 'qs';
 // var qs = require('qs');
 // import { createBrowserHistory } from 'history';
 // const history = createBrowserHistory();
@@ -16,10 +16,10 @@ export const login = function (user) {
     method: 'POST',
     url: `${process.env.REACT_APP_API}/login`,
      headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    //    data: qs.stringify(user),
-    data: user,
+    data: qs.stringify(user),
+    //data: user,
     // headers: { 'content-type': 'application/json' },
-    // withCredentials: true,
+    withCredentials: true,
   }).then((response) => {
     setUser(response.data);
   });
@@ -29,10 +29,14 @@ export const signup = (user) => {
   return axios({
     method: 'POST',
     url: `${process.env.REACT_APP_API}/signup`,
-    data: user, //qs.stringify(user),
-    // data: this.state.user,
-    // withCredentials: true,
     headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    data: qs.stringify(user),
+    withCredentials: true,
+    //data: user, 
+    
+    // data: this.state.user,
+    
+    
     //headers: { 'content-type': 'application/json' },
   }).then((response) => {
     setUser(response.data);
