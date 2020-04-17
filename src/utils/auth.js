@@ -15,8 +15,8 @@ export const login = function (user) {
   return axios({
     method: 'POST',
     url: `${process.env.REACT_APP_API}/login`,
-     headers: { 'content-type': 'application/x-www-form-urlencoded' },
     data: qs.stringify(user),
+     headers: { 'content-type': 'application/x-www-form-urlencoded'}, 
     //data: user,
     // headers: { 'content-type': 'application/json' },
     withCredentials: true,
@@ -29,8 +29,8 @@ export const signup = (user) => {
   return axios({
     method: 'POST',
     url: `${process.env.REACT_APP_API}/signup`,
-    headers: { 'content-type': 'application/x-www-form-urlencoded' },
     data: qs.stringify(user),
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },
     withCredentials: true,
     //data: user, 
     
