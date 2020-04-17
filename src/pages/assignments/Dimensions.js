@@ -18,7 +18,7 @@ class Dimensions extends Component {
             
               <Link to="/resultdimensions" className="icon">
               <div className="dimensions-box">
-                <h4>Check out you photos</h4>
+                <h4>Check out your photos</h4>
                 </div>
               </Link>
             
