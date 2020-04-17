@@ -16,6 +16,10 @@ export const login = function (user) {
     method: 'POST',
     url: `${process.env.REACT_APP_API}/login`,
     data: qs.stringify(user)
+     headers: { 'content-type': 'application/x-www-form-urlencoded' 
+    //data: user,
+    // headers: { 'content-type': 'application/json' },
+    withCredentials: true,
   }).then((response) => {
     setUser(response.data);
   });
@@ -26,6 +30,14 @@ export const signup = (user) => {
     method: 'POST',
     url: `${process.env.REACT_APP_API}/signup`,
     data: qs.stringify(user),
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },,
+    withCredentials: true,
+    //data: user, 
+    
+    // data: this.state.user,
+    
+    
+    //headers: { 'content-type': 'application/json' },
   }).then((response) => {
     setUser(response.data);
   });
