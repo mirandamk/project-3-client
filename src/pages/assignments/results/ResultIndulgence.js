@@ -15,7 +15,7 @@ class ResultIndulgence extends Component {
 
   componentDidMount() {
     axios({
-      withCredentials: true,
+    withCredentials: true,
       method: 'GET',
       url: `${process.env.REACT_APP_API}/results/indulgence-restraint`
     })

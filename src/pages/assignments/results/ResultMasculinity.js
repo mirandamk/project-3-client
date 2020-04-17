@@ -14,7 +14,8 @@ class ResultMasculinity extends Component {
   }
 
   componentDidMount() {
-    axios({withCredentials: true,
+    axios({
+      withCredentials: true,
       method: 'GET',
       url: `${process.env.REACT_APP_API}/results/masculinity-feminity` })
       .then((response) => {
