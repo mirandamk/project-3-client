@@ -6,10 +6,15 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import userWelcome from './pages/user/User-welcome';
 
-// import userProfile from './pages/user/profile';  // Obs, this does not exist for now. 
+import Profile from './pages/user/Profile'; 
 import StudyAbroadInfo from './pages/user/StudyAbroadInfo';
 import StartAssignments from './pages/user/Welcome-assignment';
 import ResultDimensions from './pages/assignments/results/ResultDimensions';
+
+import Homesickness from './pages/user/Homesickness';
+import HomeUniContact from './pages/user/HomeUniContact';
+import ExchangeUniContact from './pages/user/ExchangeUniContact';
+
 
 import HofstedeIntro from './pages/hofstede/HofstedeIntro';
 import HofstedeCountries from './pages/hofstede/HofstedeCountries';
@@ -39,10 +44,14 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/user" component={userWelcome} />
           {/* // */}
-          {/* <Route path="/profile" component={userProfile} />     // Obs, this does not exist for now. */}
+          <Route path="/profile" component={Profile} />
           <Route path="/study-abroad-info" component={StudyAbroadInfo} />
           <Route path="/startassignments" component={StartAssignments} />
           <Route path="/resultdimensions" component={ResultDimensions} />
+          {/* // */}
+          <Route path="/homesickness" component={Homesickness} />
+          <Route path="/homeuniversitycontact" component={HomeUniContact} />
+          <Route path="/exchangeuniversitycontact" component={ExchangeUniContact}/>
           {/* // */}
           <Route path="/hofstede-intro" component={HofstedeIntro} />
           <Route path="/countries" component={HofstedeCountries} />
