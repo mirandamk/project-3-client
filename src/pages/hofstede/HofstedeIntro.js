@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../stylesheets/General.css';
 import '../stylesheets/Hofstede.css';
+import '../stylesheets/Result.css';
+import '../stylesheets/Assignments.css';
 
 class HofstedeIntro extends Component {
     render() {
@@ -14,7 +16,9 @@ class HofstedeIntro extends Component {
             </div>
 
             <div className="hofstedeBox">
-              <h2 className="HI-header">Hofstede's Six Dimensions of Culture</h2>
+              <h2 className="HI-header">
+                Hofstede's Six Dimensions of Culture
+              </h2>
               <p className="HI-text">
                 Psychologist Dr Geert Hofstede published his cultural dimensions
                 model at the end of the 1970s, based on a decade of research.
@@ -25,25 +29,26 @@ class HofstedeIntro extends Component {
                 from another. Later, he added fifth and sixth dimensions, in
                 cooperation with Drs Michael H. Bond and Michael Minkov. These
                 are:
-                </p>
-              <ul >
+              </p>
+              <ul>
                 <li>Power Distance Index (high versus low)</li>
                 <li> Individualism Versus Collectivism</li>
                 <li> Masculinity Versus Femininity</li>
                 <li> Uncertainty Avoidance Index (high versus low)</li>
-                  <li> Long- Versus Short-Term Orientation</li>
-                  <li> Indulgence Versus Restraint</li>
-                </ul>
-              <p className="HI-text">Want to read more about Hofstede and his dimension?  
-                 </p>
-                  <a
+                <li> Long- Versus Short-Term Orientation</li>
+                <li> Indulgence Versus Restraint</li>
+              </ul>
+              <p className="HILink">
+                Want to read more about Hofstede and his dimension?
+                <a
                   href="https://www.hofstede-insights.com/"
                   target="_blank"
                   without
                   rel="noopener noreferrer"
-                > 
-                   Click here.
-                  </a>
+                >
+                  Click here.
+                </a>
+              </p>
             </div>
 
             <div className="btnFooter">
@@ -54,6 +59,18 @@ class HofstedeIntro extends Component {
                 <button className="nextBtn">Next</button>
               </Link>
             </div>
+
+            {/* <Link to="/countries">
+              <button className="assignment-btn">
+                <p>To Hofstede's countries</p>
+              </button>
+            </Link>
+
+            <div className="result-btn">
+              <Link to="/startassignments" className="icon">
+                <h4>Back</h4>
+              </Link>
+            </div> */}
           </div>
         );
     }

@@ -65,14 +65,23 @@
 }
 
 ul{
-    list-style: inside;
+    list-style: outside;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    flex-direction: unset;
+    justify-content: flex-start;
     margin: 0;
 }
 li{
     margin: 0% 0% 1% 5%;
     text-align: left;
+}
+
+.HI-text{
+    color: black;
+}
+
+.HILink{
+        display: inline-flex;
 }
 

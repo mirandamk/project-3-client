@@ -62,7 +62,7 @@ componentDidMount(){
                 <button className="backBtn">Back</button>
               </Link>
               <Link to="/dimensions">
-                <button className="nextBtn">Cont to H's dimensions</button>
+                <button className="nextBtn">To Assignment Menu</button>
               </Link>
             </div>
           </div>

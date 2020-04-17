@@ -39,39 +39,42 @@ export default class Login extends Component {
   render() {
     return (
       <article className="bg">
-        <div className="login-container">
-          <h2>Log in</h2>
-          <div className="login-form">
-            <p className="questionMark">Don't have an account? <Link to="/signup" > Create
-                           </Link>
-            </p>
-            <div>
-              <input
-                onChange={this.handleChange}
-                value={this.state.username}
-                name="username"
-                type="text"
-                placeholder="username"
-                className="form-section"
-              />
+        <form>
+          <div className="login-container">
+            <h2>Log in</h2>
+            <div className="login-form">
+              <p className="questionMark">
+                Don't have an account? <Link to="/signup"> Create</Link>
+              </p>
+
+              <div>
+                <input
+                  onChange={this.handleChange}
+                  value={this.state.username}
+                  name="username"
+                  type="text"
+                  placeholder="username"
+                  className="form-section"
+                />
+              </div>
+            </div>
+            <div className="login-form">
+              <div>
+                <input
+                  onChange={this.handleChange}
+                  value={this.state.password}
+                  name="password"
+                  type="password"
+                  placeholder="password"
+                  className="form-section"
+                />
+              </div>
             </div>
           </div>
-          <div className="login-form">
-            <div>
-              <input
-                onChange={this.handleChange}
-                value={this.state.password}
-                name="password"
-                type="password"
-                placeholder="password"
-                className="form-section"
-              />
-            </div>
-          </div>
-        </div>
-        <button className="login-btn" onClick={this.handleSubmit}>
-          <p className="login-text">LOG IN</p>
-        </button>
+          <button className="login-btn" onClick={this.handleSubmit}>
+            <p className="login-text">LOG IN</p>
+          </button>
+        </form>
       </article>
     );
   }

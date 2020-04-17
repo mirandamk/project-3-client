@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../stylesheets/General.css';
-import axios from 'axios';
+import '../stylesheets/Result.css';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class StudyAbroadInfo extends Component {
@@ -32,55 +33,41 @@ class StudyAbroadInfo extends Component {
         {/* return ( */}
         <article className="bg">
           <div className="welcome-box">
-            <div className="icon-card-box">
-              {/* <img
-                    src="../icons/peep_p1.png"
-                    alt=""
-                    className="icon-card"
-                  /> */}
-            </div>
-            <div>
-              <Link to="/homeunicontact" className="icon">
-                Contact details home uni
-              </Link>
-            </div>
-          </div>
-
-          <div className="welcome-box">
-            <div className="icon-card-box">
-              {/* <img
-                    src="../icons/icon_earth.png"
-                    alt=""
-                    className="icon-card"
-                  /> */}
-            </div>
+            <div className="icon-card-box"></div>
             <div>
               <Link to="/homesickness" className="icon">
-                What to do with home sickness
+                Home sick?
+              </Link>
+            </div>
+          </div>
+          <div className="welcome-box">
+            <div className="icon-card-box"></div>
+            <div>
+              <Link to="/homeuniversitycontact" className="icon">
+                Home University Contacts
               </Link>
             </div>
           </div>
 
           <div className="welcome-box">
-            <div className="icon-card-box">
-              {/* <img
-                    src="../icons/icon_start.png"
-                    alt=""
-                    className="icon-card"
-                  /> */}
-            </div>
+            <div className="icon-card-box"></div>
             <div>
-              <Link to="/exunicontact" className="icon">
-                Contact detail/Info about exchange uni
+              <Link to="/exchangeuniversitycontact" className="icon">
+                Exchange University Contacts
               </Link>
             </div>
           </div>
+          <div className="result-btn">
+            <Link to="/user" className="icon">
+              <h4>Home</h4>
+            </Link>
+          </div>
 
-          <div className="btnFooter">
+          {/* <div className="btnFooter">
             <Link to="/user">
               <button className="backBtn">Home</button>
             </Link>
-          </div>
+          </div> */}
         </article>
       </div>
     );
