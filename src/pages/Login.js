@@ -28,7 +28,7 @@ export default class Login extends Component {
   handleSubmit(event) {
     login(this.state)
       .then(() => {
-        this.props.history.push('/user');
+        this.props.history.push('/dimensions');
         console.log(this.state.user);
       })
       .catch((err) => {
