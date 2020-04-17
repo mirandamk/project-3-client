@@ -6,7 +6,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import userWelcome from './pages/user/User-welcome';
 
-// import userProfile from './pages/user/profile';  // Obs, this does not exist for now. 
+import Profile from './pages/user/Profile'; 
 import StudyAbroadInfo from './pages/user/StudyAbroadInfo';
 import StartAssignments from './pages/user/Welcome-assignment';
 import ResultDimensions from './pages/assignments/results/ResultDimensions';
@@ -44,7 +44,7 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/user" component={userWelcome} />
           {/* // */}
-          {/* <Route path="/profile" component={userProfile} />     // Obs, this does not exist for now. */}
+          <Route path="/profile" component={Profile} />
           <Route path="/study-abroad-info" component={StudyAbroadInfo} />
           <Route path="/startassignments" component={StartAssignments} />
           <Route path="/resultdimensions" component={ResultDimensions} />
