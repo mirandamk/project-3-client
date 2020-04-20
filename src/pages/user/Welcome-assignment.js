@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../stylesheets/user/Welcome-Assignment.css';
 import '../stylesheets/General.css';
 import { Link } from 'react-router-dom';
-// import WeeklyAssignments from './WeeklyAssignments';
 
 class WelcomeAssignment extends Component {
   constructor(props) {

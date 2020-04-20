@@ -59,18 +59,6 @@ class HofstedeIntro extends Component {
                 <button className="nextBtn">Next</button>
               </Link>
             </div>
-
-            {/* <Link to="/countries">
-              <button className="assignment-btn">
-                <p>To Hofstede's countries</p>
-              </button>
-            </Link>
-
-            <div className="result-btn">
-              <Link to="/startassignments" className="icon">
-                <h4>Back</h4>
-              </Link>
-            </div> */}
           </div>
         );
     }

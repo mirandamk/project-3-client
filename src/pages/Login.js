@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import './stylesheets/General.css';
 import './stylesheets/Login.css';
 
-// import axios from 'axios';
-// import qs from 'qs';
-
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -81,19 +78,3 @@ export default class Login extends Component {
   }
 }
 
-//    e.preventDefault();
-//    axios({
-//      method: 'POST',
-//      data: qs.stringify(this.state),
-//      url: 'https://ih-beers-api.herokuapp.com/auth/login',
-//      headers: {
-//        'Content-Type': 'application/x-www-form-urlencoded',
-//      },
-//    }).then((response) => {
-//      localStorage.setItem(
-//        'user',
-//        JSON.stringify(response.data)
-//      );
-//      this.props.history.push('/');
-//    });
-//  }

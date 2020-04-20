@@ -1,3 +1,5 @@
+//Future plans: add more sign up contact details
+
 import React from 'react';
 import { signup } from "../utils/auth";
 import {Link} from 'react-router-dom';
@@ -34,7 +36,6 @@ export default class Signup extends React.Component {
 
                  // 'login' refers to function in 'utils/auth'
                  handleSubmit() {
-                   //debugger
                    signup(this.state.user)
                      .then(() => {
                        this.props.history.push('/login');

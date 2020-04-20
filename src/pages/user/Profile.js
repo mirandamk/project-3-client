@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../stylesheets/General.css';
-// import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class Profile extends Component {

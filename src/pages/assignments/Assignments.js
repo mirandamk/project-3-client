@@ -1,15 +1,9 @@
-//Note: still need to add upload photo functionality. Shall we use Cloudinary or not?
-//Note: need to figure out how to add it to the user._id
-// when user doesn't add a dimension, have an alert box open up
+// Future plans: when user doesn't add a dimension, have an alert box open up
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/Assignments.css';
-// import axios from 'axios';
-// import qs from 'qs';
 import service from '../../api/service';
-// import Nav from '../components/Nav';
-
 
 class Assignment extends Component {
   constructor(props) {
@@ -31,15 +25,11 @@ class Assignment extends Component {
     console.log('The file to be uploaded is: ', e.target.files[0]);
 
     const uploadData = new FormData();
-    // imageUrl => this name has to be the same as in the model since we pass
-    // req.body to .create() method when creating a new thing in '/api/things/create' POST route
     uploadData.append('dimension-image', e.target.files[0]);
 
     service
       .handleUpload(uploadData)
       .then((response) => {
-        // console.log('response is: ', response);
-        // after the console.log we can see that response carries 'secure_url' which we can use to update the state
         this.setState({ image: response });
       })
       .catch((err) => {
@@ -54,7 +44,6 @@ class Assignment extends Component {
       .saveAssignment(this.state)
       .then((res) => {
         console.log('added: ', res);
-        // here you would redirect to some other page
       })
       .catch((err) => {
         console.log('Error while adding the thing: ', err);
@@ -79,17 +68,17 @@ class Assignment extends Component {
             value={this.state.dimension}
           >
             <option>Choose a dimension</option>
-            <option value="power-distance">Power-distance</option>
+            <option value="power-distance">Power Distance</option>
             <option value="individualism-collectivism">
-              Individualism-collectivism
+              Individualism - Collectivism
             </option>
-            <option value="masculinity-feminity">masculinity-feminity</option>
-            <option value="uncertainty avoidance">uncertainty avoidance</option>
-            <option value="long term - short term orientation">
-              long term - short term orientation
+            <option value="masculinity-feminity">Masculinity - Feminity</option>
+            <option value="uncertainty-avoidance">Uncertainty Avoidance</option>
+            <option value="long-term-orientation">
+              Long Term - Short Term Orientation
             </option>
-            <option value="indulgence - restraint">
-              indulgence - restraint
+            <option value="indulgence-restraint">
+              Indulgence - Restraint
             </option>
           </select>
 
@@ -128,73 +117,3 @@ class Assignment extends Component {
 
 export default Assignment;
 
-
-
-// //This is a test page. Should be deleted at some point. Now used to check authentication protect
-
-// import React, { Component } from 'react';
-// // import './App.css';
-// import axios from 'axios';
-// import { getUser } from '../../utils/auth';
-// import { Redirect } from 'react-router-dom';
-
-
-// class Assignments extends Component {
-//   constructor(props) {
-//     super(props);
-      
-//     this.state = {
-//       assignments: []
-//     };
-//   }
-
-//   componentDidMount() {
-//     axios
-//       .get('http://localhost:3000/assignments')
-//       .then((response) => {
-//         this.setState({ assignments: response.data });
-//       })
-//       .catch((err) => {
-//         // check the status code of error, if 403 redirect to login using history.push
-//         console.log(err)
-//       });
-//   }
-//   render() {
-//     let user = getUser();
-//     let assignments = this.state.assignments;
-//     return (
-//     <div>
-//         {!user ? (
-//           <Redirect to="/login" />
-//         ) : (
-//       <div>
-//         <h1>Assignment page</h1>
-//             <div className="Assignments">
-//             {assignments.map((assignment) => {
-//               return (
-//                 <div className="assignment-container">
-//                   <div className="assignment-explanation">
-//                     <h2>{assignment.explanation}</h2>
-//                   </div>
-//                   <div className="assignment-answer">
-//                     <h3>{assignment.answer}</h3>
-//                   </div>
-//                   <div className="assignment-masculinity">
-//                     <h3>{assignment.answerMasculinity}</h3>
-//                   </div>
-//                 </div>
-//               )
-//             }
-//             )
-//             }
-//             </div>
-//       </div>
-//        )
-//        }
-//     </div>    
-//     ) 
-//   }
-// }
-      
-
-// export default Assignments;
